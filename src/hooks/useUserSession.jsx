@@ -23,6 +23,7 @@ const useUserSession = () => {
   }, [userSteamId]);
 
   console.log(userSteamId);
+  console.log(fetchUserData);
 
   const fetchUserData = async () => {
     const user = "http://139.59.179.67:4000/api/auth/user";
