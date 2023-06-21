@@ -1,0 +1,20 @@
+form#payment-form {
+    width: 100%;
+}
+
+div#payment-element {
+    margin: 7.5% 3%;
+    
+}
+.btn-container {
+    width: 100%;
+    text-align: center;
+    display: flex;
+}
+
+
+  
+  #paymentModal {
+    z-index: 9999;
+  }
+  

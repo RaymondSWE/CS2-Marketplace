@@ -1,0 +1,73 @@
+.toaster {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #131118;
+  color: #f6f3ea;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.toaster.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.toaster .close-button {
+  flex-shrink: 0;
+  margin-right: 12px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #f6f3ea;
+  font-size: 24px;
+  transition: color 0.3s ease-in-out;
+}
+
+.toaster .close-button:hover {
+  color: #5cc6ff;
+}
+
+.toaster p {
+  margin: 0;
+  padding: 0;
+  color: #f6f3ea;
+  font-weight: 700;
+  background: transparent;
+  background-image: linear-gradient(
+    73.6deg,
+    #85ffc4 2.11%,
+    #5cc6ff 42.39%,
+    #bc85ff 85.72%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

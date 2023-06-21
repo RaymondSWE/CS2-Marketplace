@@ -1,0 +1,51 @@
+{
+  "error": null,
+  "items": [
+    {
+      "appid": 730,
+      "contextid": "2",
+      "assetid": "28035431509",
+      "classid": "4365115393",
+      "instanceid": "188530170",
+      "amount": "1",
+      "item_type": {
+        "value": 3,
+        "name": "weapon"
+      },
+      "item_wear": "WW",
+      "inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561199425314389A28035431509D14592875158871363592",
+      "data": {
+        "background": "",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot6-iFAR17PLddgJN_t24k4W0g-X9MrXWmm5u5cB1g_zMu4qmjQO3rhJoNm31J4PGIQNrMwyDqAK9yebr18Lq6JvLy3tl6ykh7S3D30vgaHf5G_Y",
+        "tradable": 1,
+        "marketable": 1,
+        "market_hash_name": "StatTrak™ AUG | Triqua (Well-Worn)",
+        "type": "StatTrak™ Mil-Spec Grade Rifle",
+        "color": "CF6A32"
+      }
+    },
+    {
+      "appid": 730,
+      "contextid": "2",
+      "assetid": "28035425281",
+      "classid": "310778328",
+      "instanceid": "480085569",
+      "amount": "1",
+      "item_type": {
+        "value": 3,
+        "name": "weapon"
+      },
+      "item_wear": "FN",
+      "inspect": "steam://rungame/730/76561202255233023/+csgo_econ_action_preview%20S76561199425314389A28035425281D16744608147733869876",
+      "data": {
+        "background": "",
+        "image": "-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpoor-mcjhh3szLYyRR-N26mImRkvPLP7LWnn8fv50miL7A8N6s0Vfn-BJsY2r2JYOQcQFqZFvT_wO9ybrqjZ_pvsjAn2wj5Hc2tBLiaQ",
+        "tradable": 1,
+        "marketable": 1,
+        "market_hash_name": "Tec-9 | Red Quartz (Factory New)",
+        "type": "Restricted Pistol",
+        "color": "D2D2D2"
+      }
+    }
+  ]
+}

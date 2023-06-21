@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Poppins:wght@700&display=swap');
+
+.navbar {
+  padding: 15px 10px;
+  background: #09080cd7;
+  border: none;
+  border-radius: 0;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+}
+
+.navbar-brand {
+  font-family: 'Barlow', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.10em;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 0.5rem 1rem !important;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  transition: 0.3s;
+}
+.nav-link
+{
+  margin-right: 15px
+}
+
+.navbar-dark .navbar-nav .active > .nav-link {
+  background: transparent;
+  box-shadow: inset 0px -2px 0px #ffffff;
+  transition: 0.3s;
+  
+}
+
+
+
+.user-detail-container {
+  background: #1c1924;
+  border-radius: 100px;
+  width: auto;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.user-detail-container:hover {
+  background: #2c2a37;
+  color: #ffffff;
+  transition: 0.3s;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+}
+
+.btn.fill-balance {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #1c1924;
+  padding: 10px 20px;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  border-radius: 100px;
+}
+
+.btn.fill-balance:hover {
+  background-color: #2c2a37;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 50%);
+}
+
+.btn.fill-balance:active {
+  transform: translateY(2px);
+}
+
+.user-detail-container .login-user-name {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  
+}
+
+.user-detail-container .login-user-img {
+  padding: 5px;
+  border: 1px solid #5cc6ff;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #5cc6ff;
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 0.25rem 1.5rem;
+  clear: both;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  border: 0;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  box-shadow: inset 0px -2px 0px #ffffff;
+  transition: 0.3s;
+}
+
+.logout {
+  animation: logout 0.5s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.dropdown-menu {
+  top: 100%;
+  left: -100%;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #1c1924;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  /* Add your media query styles here */
+}
