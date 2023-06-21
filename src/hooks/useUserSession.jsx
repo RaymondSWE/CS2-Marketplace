@@ -41,7 +41,9 @@ const useUserSession = () => {
         responseType: "json",
       });
       console.log(res.data._json.steamid); // logging steamid for debugging
-      console.log(res.data);
+      console.log(res);
+      console.log('Response: ', res);  // Log the entire response object
+
 
       setUserSteamId(res.data._json.steamid);
     } catch (error) {
