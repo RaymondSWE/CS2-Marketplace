@@ -14,10 +14,10 @@ import { Form, InputGroup } from "react-bootstrap";
 import useUserSession from "../../hooks/useUserSession";
 
 const SellAsk = (props) => {
-  const socket = io("http://localhost:80");
+  const socket = io("http://139.59.179.67:80");
   const FETCH_USERSTEAMID_FROM_SESSION =
-    "http://localhost:4000/api/auth/steamid";
-  const FETCH_USER_OBJECT_FROM_SESSION = "http://localhost:4000/api/auth/user";
+    "http://139.59.179.67:4000/api/auth/steamid";
+  const FETCH_USER_OBJECT_FROM_SESSION = "http://139.59.179.67:4000/api/auth/user";
   const sellAskModalRef = useRef(null);
   const [listedPrice, setListedPrice] = useState({});
 
@@ -66,7 +66,7 @@ const SellAsk = (props) => {
 
   const fetchTradelink = (steamid) => {
     const FETCH_TRADELINK =
-      "http://localhost:4000/api/user/getTradeLink/" + steamid;
+      "http://139.59.179.67:4000/api/user/getTradeLink/" + steamid;
     fetch(FETCH_TRADELINK)
       .then((res) => res.json())
       .then((data) => {

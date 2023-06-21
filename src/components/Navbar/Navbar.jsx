@@ -21,7 +21,7 @@ const Navbar = () => {
   const [openDeposit, setOpenDeposit] = useState(false);
   const [showWithdrawModal, setShowWithdrawModal] = useState(false); // state for showing/hiding the withdraw modal
 
-  const logoutUrl = `http://localhost:4000/api/auth/logout`;
+  const logoutUrl = `http://139.59.179.67:4000/api/auth/logout`;
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
   const { userId, balance, email, tradeLink } = useUserSession();
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   function fetchUserData() {
     axios
-      .get("http://localhost:4000/api/auth/user", {
+      .get("http://139.59.179.67:4000/api/auth/user", {
         withCredentials: true,
       })
       .then((res) => {
@@ -40,7 +40,7 @@ const Navbar = () => {
         if (!res.data.email) {
           axios
             .get(
-              `http://localhost:4000/api/user/getUserEmailWithNull/${res.data.id}`
+              `http://139.59.179.67:4000/api/user/getUserEmailWithNull/${res.data.id}`
             )
             .then((res) => {
               if (res.data.users.length) {
@@ -78,7 +78,7 @@ const Navbar = () => {
   }
 
   function showSignUp() {
-    window.location.href = "http://localhost:4000/api/auth/steam";
+    window.location.href = "http://139.59.179.67:4000/api/auth/steam";
   }
 
   function UserAccount() {
@@ -159,7 +159,7 @@ const Navbar = () => {
   function AnonymousUser() {
     return (
       <a
-        href="http://localhost:4000/api/auth/steam"
+        href="http://139.59.179.67:4000/api/auth/steam"
         style={{ background: "transparent" }}
       >
         <img alt="Login" src={steamLoginImg} />
@@ -211,7 +211,7 @@ const Navbar = () => {
             <div>
               {Object.keys(response).length > 0 ? (
                 response.hasOwnProperty("error") ? (
-                  <a href="http://localhost:4000/api/auth/steam">
+                  <a href="http://139.59.179.67:4000/api/auth/steam">
                     <img alt="Login" src={steamLoginImg} />
                   </a>
                 ) : (

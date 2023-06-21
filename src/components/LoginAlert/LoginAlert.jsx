@@ -21,7 +21,7 @@ const LoginAlert = ({ show, handleClose }) => {
           Close
         </Button>
         <a
-          href="http://localhost:4000/api/auth/steam"
+          href="http://139.59.179.67:4000/api/auth/steam"
           className="btn GradientBtn my-2 px-4 mr-2 my-sm-0 text-white"
         >
           Log In

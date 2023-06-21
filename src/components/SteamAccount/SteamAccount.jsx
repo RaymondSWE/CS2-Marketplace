@@ -5,7 +5,7 @@ import "./SteamAccount.css";
 
 const SteamAccount = (props) => {
   const [tradelink, setTradeLink] = useState("");
-  const tradeUrl = "http://localhost:4000/api/user/addUserTradeLink";
+  const tradeUrl = "http://139.59.179.67:4000/api/user/addUserTradeLink";
 
   const tradeUrlPattern =
     /https:\/\/steamcommunity.com\/tradeoffer\/new\/\?partner=[0-9]+&token=[A-Za-z0-9]+/;
