@@ -25,7 +25,7 @@ const useUserSession = () => {
   }, [userSteamId]);
 
   const fetchUserData = async () => {
-    const user = "http://localhost:4000/api/auth/user";
+    const user = "http://139.59.179.67:4000/api/auth/user";
 
     try {
       const res = await axios.get(user, {
