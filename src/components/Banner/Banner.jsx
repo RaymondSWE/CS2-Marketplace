@@ -65,7 +65,7 @@ const Banner = () => {
                         className="btn navbarBtn homepageBtn my-2 mr-2 my-sm-0"
                         onClick={() =>
                           (window.location.href =
-                            "http://localhost:4000/api/auth/steam")
+                            "http://139.59.179.67:4000/api/auth/steam")
                         }
                       >
                         <span>
