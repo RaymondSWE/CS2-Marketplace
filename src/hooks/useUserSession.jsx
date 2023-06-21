@@ -39,6 +39,8 @@ const useUserSession = () => {
         withCredentials: true,
         responseType: "json",
       });
+
+      console.log("User Data: ", res.data);
   
       setUserSteamId(res.data.id);
     } catch (error) {
@@ -47,8 +49,6 @@ const useUserSession = () => {
   };
   
 
-  console.log('User Steam ID: ', userSteamId);  // Log the user steam id
-  console.log('User Data: ', userSteamId ? userSteamId : "No user data");
   
 
   const fetchUserBalance = async () => {
