@@ -1,0 +1,64 @@
+.contactUs-section {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+header {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+header > p {
+  font-size: 1rem;
+  color: #a6a0bb;
+}
+
+h5.contactUs-title {
+  font-size: 2rem;
+  color: #f4f4f6;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-family: 'Barlow', sans-serif;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+form {
+  margin-top: 1rem;
+}
+
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+  .contactUs-section {
+    max-width: 90%;
+  }
+  h5.contactUs-title {
+    margin-top: 0;
+    font-size: 1.75rem;
+  }
+  header > p {
+    font-size: 0.75rem;
+  }
+}
+
+.contactUsBtn {
+  background-image: linear-gradient(90deg, #85ffc486 0%, #27a1e2 50%, #bc85ff 100%);
+  transition: background-image 0.3s ease, transform 0.3s;
+  border-bottom: 1px solid #5cc6ff;
+  box-shadow: 0 0 10px #5cc6ff;
+}
+
+.contactUsBtn:hover {
+  border-color: #5cc6ff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #5cc6ff;
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  .contactUs-section {
+    max-width: 80%;
+  }
+}

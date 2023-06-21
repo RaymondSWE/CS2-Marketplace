@@ -1,0 +1,97 @@
+/* SteamAccount.css */
+
+.modal-content {
+  border: 1px solid #5cc6ff;
+  box-shadow: 0 0 5px #5cc6ff;
+}
+
+
+
+.modal-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+
+.container {
+  padding: 20px;
+}
+
+.userImage {
+  margin: 20px auto;
+  display: block;
+  border: 2px solid #5cc6ff;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #5cc6ff;
+}
+
+.accountName {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 24px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
+
+.trade-url-instruction {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+
+
+.gradient-button {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 25%;
+  border: 2px solid #5cc6ff;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #5cc6ff;
+}
+
+.gradient-button:hover {
+  background: #5cc6ff;
+  color: #fff;
+  box-shadow: 0 0 25px #5cc6ff;
+}
+.get-trade-url {
+  margin-top: 20px;
+}
+
+
+.steamAccount-button {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  background: transparent;
+  border: 2px solid #5cc6ff;
+  border-radius: 50px;
+  box-shadow: 0 0 10px #5cc6ff;
+  margin: 0;
+}
+
+.steamAccount-button:hover {
+  border-color: #5cc6ff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px #5cc6ff;
+}
+
+

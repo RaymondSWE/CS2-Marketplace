@@ -1,0 +1,227 @@
+.withdraw-component {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: #f6f3ea;
+  background: #131118;
+  border-radius: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #5cc6ff;
+  box-shadow: 0 0 12px #5cc6ff;
+}
+
+.withdraw-component .form-section {
+  padding: 1.5rem;
+  border-radius: 1rem;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: #f6f3ea;
+}
+
+.close-icon {
+  fill: #fff;
+  border-radius: 50%;
+}
+
+.items-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.item-lock-icon {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.item-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.item-option img {
+  width: 80%;
+  max-height: 100px;
+  object-fit: contain;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.item-info {
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 0.8rem;
+}
+
+
+.price {
+  font-weight: bold;
+}
+
+.withdraw-button {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 20px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+  padding: 0.3rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out, transform 0.3s ease;
+  color: #f6f3ea;
+  background: transparent;
+  border: 2px solid #5cc6ff;
+  border-radius: 50px;
+  box-shadow: 0 0 8px #5cc6ff;
+}
+
+.withdraw-button:hover {
+  border-color: #5cc6ff;
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 0 12px #5cc6ff;
+}
+
+.withdraw-button:disabled {
+  color: #aaa;
+  cursor: not-allowed;
+}
+
+
+.arrow-button {
+  position: absolute;
+  top: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: rgba(92, 198, 255, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: #f6f3ea;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 10;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.arrow-button.left {
+  left: 5px;
+}
+
+.arrow-button.right {
+  right: 5px;
+}
+
+.arrow-button:hover {
+  background-color: rgba(92, 198, 255, 0.7);
+  transform: scale(1.1);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f6f3ea;
+  margin-bottom: 1.5rem;
+}
+
+.item-price,
+.item-listed-price {
+  font-size: 0.9rem;
+  color: #a5a5a5;
+}
+
+.item-price .price,
+.item-listed-price .price {
+  font-size: 1rem;
+  color: #f6f3ea;
+}
+
+.item-listed-price {
+  font-size: 0.9rem;
+  color: #a5a5a5;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .withdraw-component {
+    padding: 1rem;
+  }
+
+  .items-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .item-option {
+    padding: 0.5rem;
+  }
+
+  .item-option img {
+    max-height: 80px;
+  }
+
+  .item-info {
+    font-size: 0.7rem;
+  }
+
+
+  .withdraw-button {
+    font-size: 10px;
+    line-height: 16px;
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+.empty-items-message {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 1.5rem;
+  left: 100%;
+  padding: 1rem;
+  border: 2px dashed #5cc6ff;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: -webkit-linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+  box-shadow: #5cc6ff;
+}
+
+@keyframes shimmer {
+  0% { background-position: -100% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@media (max-width: 600px) {
+  .empty-items-message {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+}
