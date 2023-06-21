@@ -9,7 +9,7 @@ const useBotsWebsocket = () => {
   const [getBotFloatValue, setGetBotFloatValue] = useState({});
 
   useEffect(() => {
-    const newSocket = io("http://localhost:80");
+    const newSocket = io("http://139.59.179.67:80");
     setSocket(newSocket);
 
     return () => {

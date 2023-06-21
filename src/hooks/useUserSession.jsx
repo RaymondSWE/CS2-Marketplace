@@ -23,13 +23,13 @@ const useUserSession = () => {
   }, [userSteamId]);
 
   const fetchUserData = async () => {
-    const user = "http://localhost:4000/api/auth/user";
+    const user = "http://139.59.179.67:4000/api/auth/user";
 
     try {
       const res = await axios.get(user, {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin": "http://localhost:3000",
+          "Access-Control-Allow-Origin": "http://165.227.224.186:3000",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Headers":
@@ -46,7 +46,7 @@ const useUserSession = () => {
   };
 
   const fetchUserBalance = async () => {
-    const userBalance = `http://localhost:4000/api/user/balance/${userSteamId}`;
+    const userBalance = `http://139.59.179.67:4000/api/user/balance/${userSteamId}`;
 
     try {
       const res = await axios.get(userBalance);
@@ -57,7 +57,7 @@ const useUserSession = () => {
   };
 
   const fetchUserEmail = async () => {
-    const userEmail = `http://localhost:4000/api/user/getUserEmail/${userSteamId}`;
+    const userEmail = `http://139.59.179.67:4000/api/user/getUserEmail/${userSteamId}`;
 
     try {
       const res = await axios.get(userEmail);
@@ -68,7 +68,7 @@ const useUserSession = () => {
   };
 
   const fetchUserTradeLink = async () => {
-    const userTradeLink = `http://localhost:4000/api/user/getTradeLink/${userSteamId}`;
+    const userTradeLink = `http://139.59.179.67:4000/api/user/getTradeLink/${userSteamId}`;
 
     try {
       const res = await axios.get(userTradeLink);
@@ -79,7 +79,7 @@ const useUserSession = () => {
   };
 
   const fetchAllUsersCount = async () => {
-    const allUsersCount = `http://localhost:4000/api/user/allUsersCount`;
+    const allUsersCount = `http://139.59.179.67:4000/api/user/allUsersCount`;
 
     try {
       const res = await axios.get(allUsersCount);
@@ -90,11 +90,11 @@ const useUserSession = () => {
   };
 
   const fetchUserItems = async () => {
-    const userItemsUrl = `http://localhost:4000/api/useritems/for_sale/${userSteamId}`;
+    const userItemsUrl = `http://139.59.179.67:4000/api/useritems/for_sale/${userSteamId}`;
 
     try {
       const res = await axios.get(
-        `http://localhost:4000/api/useritems/for_sale/${userSteamId}`
+        `http://139.59.179.67:4000/api/useritems/for_sale/${userSteamId}`
       );
       setUserItems(res.data);
     } catch (error) {
@@ -103,7 +103,7 @@ const useUserSession = () => {
   };
 
   const fetchItemsForSale = async () => {
-    const itemsForSaleUrl = "http://localhost:4000/api/useritems/for_sale";
+    const itemsForSaleUrl = "http://139.59.179.67:4000/api/useritems/for_sale";
 
     try {
       const res = await axios.get(itemsForSaleUrl);

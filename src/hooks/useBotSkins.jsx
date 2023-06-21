@@ -6,7 +6,7 @@ const useSkins = (botId) => {
   useEffect(() => {
     const fetchSkins = async () => {
       const response = await fetch(
-        `http://localhost:4000/api/botitems/forsale/${botId}`
+        `http://139.59.179.67:4000/api/botitems/forsale/${botId}`
       );
       const skinData = await response.json();
       setSkins(skinData);

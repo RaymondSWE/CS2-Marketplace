@@ -16,7 +16,7 @@ export default function PaymentMethod() {
   useEffect(() => {
     // instead of xl-tshirt it should be the product name which is being purchased from bot inventory
 
-    fetch("http://localhost:4000/api/stripe/create-payment-intent", {
+    fetch("http://139.59.179.67:4000/api/stripe/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),

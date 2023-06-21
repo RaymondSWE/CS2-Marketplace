@@ -68,7 +68,7 @@ const CheckoutForm = () => {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://localhost:4000/",
+        return_url: "http://139.59.179.67:4000/",
       },
     });
 
