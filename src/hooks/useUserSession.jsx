@@ -114,6 +114,7 @@ const useUserSession = () => {
   };
 
   return {
+    fetchUserData,
     userSteamId,
     balance,
     email,
