@@ -12,7 +12,7 @@ const stripePromise = loadStripe(
 
 export default function PaymentMethod() {
   const [clientSecret, setClientSecret] = useState("");
-  // const getInventoryUrl = `http://localhost:4000/api/payment/getInventory`;
+  // const getInventoryUrl = `http://http://165.227.224.186:3000/:4000/api/payment/getInventory`;
   useEffect(() => {
     // instead of xl-tshirt it should be the product name which is being purchased from bot inventory
 
