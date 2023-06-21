@@ -35,7 +35,8 @@ const useUserSession = () => {
         console.log("Error fetching user data:", res.data.error);
       } else {
         console.log("User Data:", res.data);
-        setUserSteamId(res.data.id);
+        setUserSteamId(res.data._json.steamid);
+
       }
     } catch (error) {
       console.error("Failed to fetch user data:", error);
