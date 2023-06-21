@@ -40,7 +40,7 @@ const useUserSession = () => {
         responseType: "json",
       });
   
-      setUserSteamId(res.data);
+      setUserSteamId(res.data.id);
     } catch (error) {
       console.error("Failed to fetch user data:", error);
     }
