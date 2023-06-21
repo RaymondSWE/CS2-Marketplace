@@ -24,36 +24,11 @@ const Navbar = () => {
   const logoutUrl = `http://139.59.179.67:4000/api/auth/logout`;
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-  const { userId, balance, email, tradeLink } = useUserSession();
+  const { userSteamId, balance, email, tradeLink, fetchUserData } = useUserSession();
 
   useEffect(() => {
     fetchUserData();
   }, []);
-
-  function fetchUserData() {
-    axios
-      .get("http://139.59.179.67:4000/api/auth/user", {
-        withCredentials: true,
-      })
-      .then((res) => {
-        setResponse(res.data);
-        if (!res.data.email) {
-          axios
-            .get(
-              `http://139.59.179.67:4000/api/user/getUserEmailWithNull/${res.data.id}`
-            )
-            .then((res) => {
-              if (res.data.users.length) {
-                setShowSignUpModal(true);
-              }
-            });
-        }
-      })
-      .catch((error) => {
-        console.error("Failed to fetch user data:", error);
-      });
-  }
-  
 
   const handleOpenDeposit = () => {
     setOpenDeposit(true);
