@@ -28,14 +28,7 @@ const useUserSession = () => {
   
     try {
       const res = await axios.get(userEndpoint, {
-        headers: {
-          "Access-Control-Allow-Origin": "http://165.227.224.186:3000",
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
-        },
-        withCredentials: true,
-        responseType: "json",
+    
       });
 
       if (res.data.error) {
