@@ -19,7 +19,7 @@ const useUserWebsocket = () => {
     };
   }, []);
 
-  const userSteamIdFromSession = "http://139.59.179.67:4000/api/auth/steamid";
+  const userSteamIdFromSession = "http://139.59.179.67:4000/api/auth/user";
 
   useEffect(() => {
     const fetchData = async () => {
