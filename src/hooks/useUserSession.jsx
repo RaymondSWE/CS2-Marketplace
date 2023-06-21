@@ -24,30 +24,30 @@ const useUserSession = () => {
 
 
   const fetchUserData = async () => {
-    const user = "http://139.59.179.67:4000/api/auth/user";
+    const userEndpoint = "http://139.59.179.67:4000/api/auth/user";
   
     try {
-      const res = await axios.get(user, {
-        method: "GET",
+      const res = await axios.get(userEndpoint, {
         headers: {
           "Access-Control-Allow-Origin": "http://165.227.224.186:3000",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
-          "Access-Control-Allow-Headers":
-            "Origin, X-Requested-With, Content-Type, Accept",
+          "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
         },
         withCredentials: true,
         responseType: "json",
       });
 
-      console.log("User Data: ", res.data);
-  
-      setUserSteamId(res.data.id);
+      if (res.data.error) {
+        console.log("Error fetching user data:", res.data.error);
+      } else {
+        console.log("User Data:", res.data);
+        setUserSteamId(res.data.id);
+      }
     } catch (error) {
       console.error("Failed to fetch user data:", error);
     }
   };
-  
 
   
 
