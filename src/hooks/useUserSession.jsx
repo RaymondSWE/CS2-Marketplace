@@ -24,7 +24,7 @@ const useUserSession = () => {
 
 
   const fetchUserData = async () => {
-    const userEndpoint = "http://139.59.179.67:4000/";
+    const userEndpoint = "http://139.59.179.67:4000/api/auth/user";
     
     try {
       const res = await axios.get(userEndpoint, {
