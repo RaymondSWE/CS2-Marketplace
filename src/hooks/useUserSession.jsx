@@ -25,7 +25,7 @@ const useUserSession = () => {
 
   const fetchUserData = async () => {
     const user = "http://139.59.179.67:4000/api/auth/user";
-
+  
     try {
       const res = await axios.get(user, {
         method: "GET",
@@ -39,20 +39,17 @@ const useUserSession = () => {
         withCredentials: true,
         responseType: "json",
       });
-      console.log(res.data._json.steamid); // logging steamid for debugging
-      console.log(res);
-      console.log('Response: ', res);  // Log the entire response object
-
-
+  
       setUserSteamId(res.data._json.steamid);
     } catch (error) {
       console.error("Failed to fetch user data:", error);
     }
   };
+  
 
   console.log('User Steam ID: ', userSteamId);  // Log the user steam id
-  console.log('User Data: ', fetchUserData());  
-
+  console.log('User Data: ', userSteamId ? userSteamId : "No user data");
+  
 
   const fetchUserBalance = async () => {
     const userBalance = `http://139.59.179.67:4000/api/user/balance/${userSteamId}`;
