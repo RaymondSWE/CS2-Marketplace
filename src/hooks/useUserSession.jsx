@@ -24,7 +24,7 @@ const useUserSession = () => {
 
 
   const fetchUserData = async () => {
-    const userEndpoint = "http://139.59.179.67:4000/api/auth/return";
+    const userEndpoint = "http://139.59.179.67:4000/api/auth/steam/return";
     
     try {
       const res = await axios.get(userEndpoint, {
