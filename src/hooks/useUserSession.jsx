@@ -22,7 +22,6 @@ const useUserSession = () => {
     }
   }, [userSteamId]);
 
-  console.log(userSteamId);
 
   const fetchUserData = async () => {
     const user = "http://139.59.179.67:4000/api/auth/user";
@@ -31,7 +30,7 @@ const useUserSession = () => {
       const res = await axios.get(user, {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin": "http://165.227.224.186:3000/",
+          "Access-Control-Allow-Origin": "http://165.227.224.186:3000",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Headers":
@@ -50,6 +49,9 @@ const useUserSession = () => {
       console.error("Failed to fetch user data:", error);
     }
   };
+
+  console.log('User Steam ID: ', userSteamId);  // Log the user steam id
+  console.log('User Data: ', fetchUserData());  
 
 
   const fetchUserBalance = async () => {
