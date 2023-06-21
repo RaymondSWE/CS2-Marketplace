@@ -40,12 +40,14 @@ const useUserSession = () => {
         withCredentials: true,
         responseType: "json",
       });
+      console.log(res.data.id);
 
       setUserSteamId(res.data.id);
     } catch (error) {
       console.error("Failed to fetch user data:", error);
     }
   };
+
 
   const fetchUserBalance = async () => {
     const userBalance = `http://139.59.179.67:4000/api/user/balance/${userSteamId}`;
