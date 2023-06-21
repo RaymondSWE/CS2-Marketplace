@@ -48,8 +48,12 @@ const Navbar = () => {
               }
             });
         }
+      })
+      .catch((error) => {
+        console.error("Failed to fetch user data:", error);
       });
   }
+  
 
   const handleOpenDeposit = () => {
     setOpenDeposit(true);
