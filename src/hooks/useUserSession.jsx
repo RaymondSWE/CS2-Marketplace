@@ -31,7 +31,7 @@ const useUserSession = () => {
       const res = await axios.get(user, {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin": "http://165.227.224.186:3000",
+          "Access-Control-Allow-Origin": "http://165.227.224.186:3000/",
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Headers":
