@@ -29,6 +29,7 @@ const useUserSession = () => {
     try {
       const res = await axios.get(userEndpoint, {
         withCredentials: true,
+        credials: "include",
       });
   
       if (res.data.error) {
