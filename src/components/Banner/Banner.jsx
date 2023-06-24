@@ -1,17 +1,40 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Banner.css";
-import gungnir from "../../assets/csgo/gungnir.png";
-import bluephosphor from "../../assets/csgo/bluephosphor_1.png";
-import sapphire from "../../assets/csgo/sapphire.png";
+import io from "socket.io-client";
 import useUserSession from "../../hooks/useUserSession";
 import { FaRss, FaSteamSquare, FaUndo, FaUsers } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import SkinPreview from "./SkinPreview";
 import DiscountedSkinPreview from "./DiscountedSkinPreview";
 import MostExpensiveSkinPreview from "./MostExpensiveSkinPreview";
+import useUserWebsocket from "../../hooks/useUserWebSocket";
 
 const Banner = () => {
   const { totalUsers, isUserOnline } = useUserSession();
+   const [onlineUsers, setOnlineUsers] = useState(0);
+  const { isLoading, socket } = useUserWebsocket();
+
+  useEffect(() => {
+    if (!isLoading && socket) {
+    }
+  }, [isLoading, socket]);
+
+  useEffect(() => {
+    if (socket) {
+      socket.on("onlineUsers", (onlineUsers) => {
+        setOnlineUsers(onlineUsers);
+      });
+
+      return () => {
+        socket.off("onlineUsers");
+      };
+    }
+  }, [socket]);
+
+  console.log(onlineUsers);
+  console.log(totalUsers);
+
+
 
   return (
     <>
@@ -38,7 +61,7 @@ const Banner = () => {
               <h4 className="text-white">
                 {" "}
                 <FaRss className="primaryText mx-2" />{" "}
-                <span className="gradientText">NaN</span>
+                <span className="gradientText">{onlineUsers}</span>
               </h4>
               <h6 className="primaryText font-p75rem">USERS ONLINE</h6>
             </div>
@@ -65,7 +88,7 @@ const Banner = () => {
                         className="btn navbarBtn homepageBtn my-2 mr-2 my-sm-0"
                         onClick={() =>
                           (window.location.href =
-                            "http://139.59.179.67:4000/api/auth/steam")
+                            "https://api.csfairtrade.com:4001/api/auth/steam")
                         }
                       >
                         <span>
@@ -75,27 +98,6 @@ const Banner = () => {
                           Sign Up Through Steam
                         </span>
                       </button>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-5">
-                  <div className="h-100 d-flex justify-content-center align-items-center">
-                    <div className="hero-image-container">
-                      <img
-                        src={gungnir}
-                        alt="Gungnir"
-                        className="img-fluid weapon-img gungnir-img"
-                      />
-                      <img
-                        src={sapphire}
-                        alt="Sapphire"
-                        className="img-fluid weapon-img sapphire-img"
-                      />
-                      <img
-                        src={bluephosphor}
-                        alt="Blue Phosphor"
-                        className="img-fluid weapon-img bluephosphor-img"
-                      />
                     </div>
                   </div>
                 </div>

@@ -18,14 +18,7 @@ export const CardContext = createContext();
 const SellBody = () => {
   const { isLoading, userInventory, getAllInventoryPrice } = useUserWebsocket();
   const { userSteamId, fetchUserItems, userItems } = useUserSession();
-
-  // useEffect(() => {
-  //   (async () => {
-  //     console.log("User Steam ID:", userSteamId);
-  //     await fetchUserItems();
-  //     console.log("Items for Sale:", userItems);
-  //   })();
-  // }, [userSteamId, fetchUserItems]);
+  console.log("userInventory", userInventory);
 
   let updateUserResponseObject = [];
 

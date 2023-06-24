@@ -28,7 +28,7 @@ const WithdrawSkinsModal = ({ handleCloseWithdraw, showModal }) => {
   };
 
   const handleItemOptionClick = (assetid) => {
-    // Emit the withdraw event with the steamID64 and assetid
+    /// Emit the withdraw event with the steamID64 and assetid
     socket.emit("withdraw", {
       steamID64: userSteamId,
       assetid: assetid,
@@ -36,7 +36,7 @@ const WithdrawSkinsModal = ({ handleCloseWithdraw, showModal }) => {
       tradelink: tradeLink,
     });
     console.log("Trade link in handleItemOptionClick: ", tradeLink);
-    socket.once("withdraw status", (data) => {
+    socket.on("withdraw status", (data) => {
       if (data.error) {
         toast.error(`Error withdrawing item: ${data.error}`);
         console.log(assetid);
@@ -46,7 +46,6 @@ const WithdrawSkinsModal = ({ handleCloseWithdraw, showModal }) => {
       }
     });
   };
-
 
   const scroll = (direction) => {
     const newStart = start + (direction === "right" ? 3 : -3);

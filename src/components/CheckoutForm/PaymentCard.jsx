@@ -58,7 +58,7 @@ export default function PaymentCard() {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "http://165.227.224.186:3000/",
+        return_url: "https://csfairtrade.com",
       },
     });
 

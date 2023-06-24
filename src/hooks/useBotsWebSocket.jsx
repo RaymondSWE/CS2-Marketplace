@@ -9,7 +9,7 @@ const useBotsWebsocket = () => {
   const [getBotFloatValue, setGetBotFloatValue] = useState({});
 
   useEffect(() => {
-    const newSocket = io("http://139.59.179.67:80");
+    const newSocket = io("https://api.csfairtrade.com:4001");
     setSocket(newSocket);
 
     return () => {

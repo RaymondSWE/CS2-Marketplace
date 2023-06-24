@@ -11,7 +11,7 @@ const useUserWebsocket = () => {
   const [getBotFloatValue, setGetBotFloatValue] = useState({});
 
   useEffect(() => {
-    const newSocket = io("http://139.59.179.67:80");
+    const newSocket = io("https://api.csfairtrade.com:4001");
     setSocket(newSocket);
 
     return () => {
@@ -19,7 +19,7 @@ const useUserWebsocket = () => {
     };
   }, []);
 
-  const userSteamIdFromSession = "http://139.59.179.67:4000/api/auth/steamid";
+  const userSteamIdFromSession = "https://api.csfairtrade.com:4001/api/auth/steamid";
 
   useEffect(() => {
     const fetchData = async () => {

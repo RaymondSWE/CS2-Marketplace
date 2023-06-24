@@ -163,66 +163,6 @@ const Sidebar = (props) => {
                     </li>
                   </ul>
                 </li>
-
-                {/* <li>
-                  <a
-                    href="#UniqueItemsSubmenu"
-                    data-toggle="collapse"
-                    aria-expanded="false"
-                    className="dropdown-toggle"
-                  >
-                    Unique items
-                  </a>
-                  <ul
-                    className="collapse list-unstyled"
-                    id="UniqueItemsSubmenu"
-                  >
-                    <li>
-                      <div className="checkBox-group">
-                        <input type="checkbox" id="uni-All" />
-                        <label htmlFor="uni-All">All</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="checkBox-group">
-                        <input type="checkbox" id="uni-RarePhase" />
-                        <label htmlFor="uni-RarePhase">Rare Phase</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="checkBox-group">
-                        <input type="checkbox" id="uni-RareFloat" />
-                        <label htmlFor="uni-RareFloat">Rare Float</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="checkBox-group">
-                        <input type="checkbox" id="uni-RareItems" />
-                        <label htmlFor="uni-RareItems">Rare Items</label>
-                      </div>
-                    </li>
-                    <li>
-                      <div className="checkBox-group">
-                        <input type="checkbox" id="uniRareStickers" />
-                        <label htmlFor="uniRareStickers">Rare Stickers</label>
-                      </div>
-                    </li>
-                  </ul>
-                </li> */}
-
-                {/* <li>
-                  <a href="#">
-                    Phase <FaQuestionCircle />
-                  </a>
-                </li> */}
-                {/* <li>
-                  <a href="#">
-                    Pattern <FaQuestionCircle />
-                  </a>
-                </li> */}
-                {/* <li>
-                  <a href="#">Stickers on items</a>
-                </li> */}
                 <li>
                   <a href="#">Items Category</a>
                 </li>
@@ -232,18 +172,9 @@ const Sidebar = (props) => {
                 <li>
                   <a href="#">StatTrak</a>
                 </li>
-                {/* <li>
-                  <a href="#">Souvenir</a>
-                </li> */}
                 <li>
                   <a href="#">Quality</a>
                 </li>
-                {/* <li>
-                  <a href="#">Collection</a>
-                </li>
-                <li>
-                  <a href="#">Family</a>
-                </li> */}
               </ul>
             </Scrollbars>
           </div>
@@ -297,15 +228,6 @@ const Sidebar = (props) => {
                     <option>Highest Price</option>
                   </select>
                 </div>
-                {/* <button
-                  type="button"
-                  id="sidebarCollapse"
-                  className="btn text-white shadow-none"
-                >
-                  <span>
-                    <FaColumns />
-                  </span>
-                </button> */}
               </div>
             </div>
           </nav>

@@ -8,7 +8,7 @@ const SignUpModal = ({ response }) => {
   const [email, setEmail] = useState("");
   const addUserEmailURL =
     process.env.REACT_APP_API_URL ||
-    `http://139.59.179.67:4000/api/user/addUserEmail`;
+    `https://api.csfairtrade.com:4001/api/user/addUserEmail`;
   const steamid64 = response.id;
 
   const handleTermsClick = () => {

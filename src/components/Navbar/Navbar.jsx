@@ -21,14 +21,35 @@ const Navbar = () => {
   const [openDeposit, setOpenDeposit] = useState(false);
   const [showWithdrawModal, setShowWithdrawModal] = useState(false); // state for showing/hiding the withdraw modal
 
-  const logoutUrl = `http://139.59.179.67:4000/api/auth/logout`;
+  const logoutUrl = `https://api.csfairtrade.com:4001/api/auth/logout`;
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
-  const { userSteamId, balance, email, tradeLink, fetchUserData } = useUserSession();
+  const { userId, balance, email, tradeLink } = useUserSession();
 
   useEffect(() => {
     fetchUserData();
   }, []);
+
+  function fetchUserData() {
+    axios
+      .get("https://api.csfairtrade.com:4001/api/auth/user", {
+        withCredentials: true,
+      })
+      .then((res) => {
+        setResponse(res.data);
+        if (!res.data.email) {
+          axios
+            .get(
+              `https://api.csfairtrade.com:4001/api/user/getUserEmailWithNull/${res.data.id}`
+            )
+            .then((res) => {
+              if (res.data.users.length) {
+                setShowSignUpModal(true);
+              }
+            });
+        }
+      });
+  }
 
   const handleOpenDeposit = () => {
     setOpenDeposit(true);
@@ -57,7 +78,7 @@ const Navbar = () => {
   }
 
   function showSignUp() {
-    window.location.href = "http://139.59.179.67:4000/api/auth/steam";
+    window.location.href = "https://api.csfairtrade.com:4001/api/auth/steam";
   }
 
   function UserAccount() {
@@ -138,7 +159,7 @@ const Navbar = () => {
   function AnonymousUser() {
     return (
       <a
-        href="http://139.59.179.67:4000/api/auth/steam"
+        href="https://api.csfairtrade.com:4001/api/auth/steam"
         style={{ background: "transparent" }}
       >
         <img alt="Login" src={steamLoginImg} />
@@ -182,15 +203,15 @@ const Navbar = () => {
         >
           <ul className="navbar-nav mr-auto">
             <CustomLink to="/">Home</CustomLink>
-            <CustomLink to="/buy">Buying</CustomLink>
-            <CustomLink to="/sell">Selling</CustomLink>
+            <CustomLink to="/buy">Buy</CustomLink>
+            <CustomLink to="/sell">Sell</CustomLink>
             <CustomLink to="/exchange">Exchange</CustomLink>
           </ul>
           <div className="form-inline my-2 my-lg-0">
             <div>
               {Object.keys(response).length > 0 ? (
                 response.hasOwnProperty("error") ? (
-                  <a href="http://139.59.179.67:4000/api/auth/steam">
+                  <a href="https://api.csfairtrade.com:4001/api/auth/steam">
                     <img alt="Login" src={steamLoginImg} />
                   </a>
                 ) : (

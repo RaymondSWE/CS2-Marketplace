@@ -24,7 +24,7 @@ const Sell = () => {
       </Helmet>
       {userSteamId ? (
         <>
-          <Sidebar mainBody={<SellBody />} placeholder="Search Inventory" />
+          <Sidebar mainBody={<SellBody />} />
           <Faq />
           <TermsConditions />
         </>

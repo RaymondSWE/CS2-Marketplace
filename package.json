@@ -34,7 +34,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "proxy": "http://165.227.224.186:3000",
+    "proxy": "https://csfairtrade.com",
     "test": "jest"
   },
   "eslintConfig": {

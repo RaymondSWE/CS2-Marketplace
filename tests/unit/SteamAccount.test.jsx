@@ -15,7 +15,7 @@ test("handleTradeLinkUpdate function works correctly", async () => {
     },
     displayName: "Test User",
   };
-  const tradeUrl = "http://139.59.179.67:4000/api/user/addUserTradeLink";
+  const tradeUrl = "https://api.csfairtrade.com:4001/api/user/addUserTradeLink";
   const invalidTradeLink = "invalid_link";
   const validTradeLink =
     "https://steamcommunity.com/tradeoffer/new/?partner=1234567890&token=ABCDEFGH";

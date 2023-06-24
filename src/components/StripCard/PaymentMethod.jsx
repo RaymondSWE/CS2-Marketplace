@@ -12,11 +12,11 @@ const stripePromise = loadStripe(
 
 export default function PaymentMethod() {
   const [clientSecret, setClientSecret] = useState("");
-  // const getInventoryUrl = `http://http://165.227.224.186:3000/:4000/api/payment/getInventory`;
+  // const getInventoryUrl = `https://api.csfairtrade.com:4001/api/payment/getInventory`;
   useEffect(() => {
     // instead of xl-tshirt it should be the product name which is being purchased from bot inventory
 
-    fetch("http://139.59.179.67:4000/api/stripe/create-payment-intent", {
+    fetch("https://api.csfairtrade.com:4001/api/stripe/create-payment-intent", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ items: [{ id: "xl-tshirt" }] }),
