@@ -23,7 +23,7 @@ const useUserSession = () => {
       fetchUserTradeLink();
     }
   }, [userSteamId]);
-
+//Test
   const fetchUserData = async () => {
     const user = "https://api.csfairtrade.com:4001/api/auth/user";
 
