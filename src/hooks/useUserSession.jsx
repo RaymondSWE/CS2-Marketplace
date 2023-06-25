@@ -25,7 +25,7 @@ const useUserSession = () => {
   }, [userSteamId]);
 //Test
   const fetchUserData = async () => {
-    const user = "${process.env.REACT_APP_API_URL}/api/auth/user";
+    const user = `${process.env.REACT_APP_API_URL}/api/auth/user`;
 
     try {
       const res = await axios.get(user, {
@@ -106,7 +106,7 @@ const useUserSession = () => {
   };
 
   const fetchItemsForSale = async () => {
-    const itemsForSaleUrl = "${process.env.REACT_APP_API_URL}/api/useritems/for_sale";
+    const itemsForSaleUrl = `${process.env.REACT_APP_API_URL}/api/useritems/for_sale`;
 
     try {
       const res = await axios.get(itemsForSaleUrl);

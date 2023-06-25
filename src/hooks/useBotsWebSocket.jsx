@@ -9,7 +9,7 @@ const useBotsWebsocket = () => {
   const [getBotFloatValue, setGetBotFloatValue] = useState({});
 
   useEffect(() => {
-    const newSocket = io("${process.env.REACT_APP_API_URL}");
+    const newSocket = io(`${process.env.REACT_APP_API_URL}`);
     setSocket(newSocket);
 
     return () => {

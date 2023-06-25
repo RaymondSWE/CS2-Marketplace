@@ -14,10 +14,10 @@ import { Form, InputGroup } from "react-bootstrap";
 import useUserSession from "../../hooks/useUserSession";
 
 const SellAsk = (props) => {
-  const socket = io("${process.env.REACT_APP_API_URL}");
+  const socket = io(`${process.env.REACT_APP_API_URL}`);
   const FETCH_USERSTEAMID_FROM_SESSION =
-    "${process.env.REACT_APP_API_URL}/api/auth/steamid";
-  const FETCH_USER_OBJECT_FROM_SESSION = "${process.env.REACT_APP_API_URL}/api/auth/user";
+  `${process.env.REACT_APP_API_URL}/api/auth/steamid`;
+  const FETCH_USER_OBJECT_FROM_SESSION = `${process.env.REACT_APP_API_URL}/api/auth/user`;
   const sellAskModalRef = useRef(null);
   const [listedPrice, setListedPrice] = useState({});
 
@@ -66,7 +66,7 @@ const SellAsk = (props) => {
 
   const fetchTradelink = (steamid) => {
     const FETCH_TRADELINK =
-      "${process.env.REACT_APP_API_URL}/api/user/getTradeLink/" + steamid;
+    `${process.env.REACT_APP_API_URL}/api/user/getTradeLink/` + steamid;
     fetch(FETCH_TRADELINK)
       .then((res) => res.json())
       .then((data) => {

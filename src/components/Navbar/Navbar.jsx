@@ -32,7 +32,7 @@ const Navbar = () => {
 
   function fetchUserData() {
     axios
-      .get("${process.env.REACT_APP_API_URL}/api/auth/user", {
+      .get(`${process.env.REACT_APP_API_URL}/api/auth/user`, {
         withCredentials: true,
       })
       .then((res) => {
@@ -78,7 +78,7 @@ const Navbar = () => {
   }
 
   function showSignUp() {
-    window.location.href = "${process.env.REACT_APP_API_URL}/api/auth/steam";
+    window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/steam`;
   }
 
   function UserAccount() {
@@ -159,7 +159,8 @@ const Navbar = () => {
   function AnonymousUser() {
     return (
       <a
-        href="${process.env.REACT_APP_API_URL}/api/auth/steam"
+        href={`${process.env.REACT_APP_API_URL}/api/auth/steam`}
+        
         style={{ background: "transparent" }}
       >
         <img alt="Login" src={steamLoginImg} />
@@ -211,7 +212,7 @@ const Navbar = () => {
             <div>
               {Object.keys(response).length > 0 ? (
                 response.hasOwnProperty("error") ? (
-                  <a href="${process.env.REACT_APP_API_URL}/api/auth/steam">
+                  <a href={`${process.env.REACT_APP_API_URL}/api/auth/steam`}>
                     <img alt="Login" src={steamLoginImg} />
                   </a>
                 ) : (

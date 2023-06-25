@@ -11,7 +11,7 @@ const useUserWebsocket = () => {
   const [getBotFloatValue, setGetBotFloatValue] = useState({});
 
   useEffect(() => {
-    const newSocket = io("${process.env.REACT_APP_API_URL}");
+    const newSocket = io(`${process.env.REACT_APP_API_URL}`);
     setSocket(newSocket);
 
     return () => {
@@ -19,7 +19,7 @@ const useUserWebsocket = () => {
     };
   }, []);
 
-  const userSteamIdFromSession = "${process.env.REACT_APP_API_URL}/api/auth/steamid";
+  const userSteamIdFromSession = `${process.env.REACT_APP_API_URL}/api/auth/steamid`;
 
   useEffect(() => {
     const fetchData = async () => {
