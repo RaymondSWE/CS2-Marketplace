@@ -6,7 +6,7 @@ const useSkins = (botId) => {
   useEffect(() => {
     const fetchSkins = async () => {
       const response = await fetch(
-        `https://api.csfairtrade.com:4001/api/botitems/forsale/${botId}`
+        `${process.env.REACT_APP_API_URL}/api/botitems/forsale/${botId}`
       );
       const skinData = await response.json();
       setSkins(skinData);

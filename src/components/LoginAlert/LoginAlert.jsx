@@ -21,7 +21,7 @@ const LoginAlert = ({ show, handleClose }) => {
           Close
         </Button>
         <a
-          href="https://api.csfairtrade.com:4001/api/auth/steam"
+          href="${process.env.REACT_APP_API_URL}/api/auth/steam"
           className="btn GradientBtn my-2 px-4 mr-2 my-sm-0 text-white"
         >
           Log In

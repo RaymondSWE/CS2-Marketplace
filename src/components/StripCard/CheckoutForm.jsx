@@ -68,7 +68,7 @@ const CheckoutForm = () => {
       elements,
       confirmParams: {
         // Make sure to change this to your payment completion page
-        return_url: "https://api.csfairtrade.com:4001/",
+        return_url: "${process.env.REACT_APP_API_URL}/",
       },
     });
 

@@ -21,7 +21,7 @@ const Navbar = () => {
   const [openDeposit, setOpenDeposit] = useState(false);
   const [showWithdrawModal, setShowWithdrawModal] = useState(false); // state for showing/hiding the withdraw modal
 
-  const logoutUrl = `https://api.csfairtrade.com:4001/api/auth/logout`;
+  const logoutUrl = `${process.env.REACT_APP_API_URL}/api/auth/logout`;
   const [showSignUpModal, setShowSignUpModal] = useState(false);
 
   const { userId, balance, email, tradeLink } = useUserSession();
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   function fetchUserData() {
     axios
-      .get("https://api.csfairtrade.com:4001/api/auth/user", {
+      .get("${process.env.REACT_APP_API_URL}/api/auth/user", {
         withCredentials: true,
       })
       .then((res) => {
@@ -40,7 +40,7 @@ const Navbar = () => {
         if (!res.data.email) {
           axios
             .get(
-              `https://api.csfairtrade.com:4001/api/user/getUserEmailWithNull/${res.data.id}`
+              `${process.env.REACT_APP_API_URL}/api/user/getUserEmailWithNull/${res.data.id}`
             )
             .then((res) => {
               if (res.data.users.length) {
@@ -78,7 +78,7 @@ const Navbar = () => {
   }
 
   function showSignUp() {
-    window.location.href = "https://api.csfairtrade.com:4001/api/auth/steam";
+    window.location.href = "${process.env.REACT_APP_API_URL}/api/auth/steam";
   }
 
   function UserAccount() {
@@ -159,7 +159,7 @@ const Navbar = () => {
   function AnonymousUser() {
     return (
       <a
-        href="https://api.csfairtrade.com:4001/api/auth/steam"
+        href="${process.env.REACT_APP_API_URL}/api/auth/steam"
         style={{ background: "transparent" }}
       >
         <img alt="Login" src={steamLoginImg} />
@@ -211,7 +211,7 @@ const Navbar = () => {
             <div>
               {Object.keys(response).length > 0 ? (
                 response.hasOwnProperty("error") ? (
-                  <a href="https://api.csfairtrade.com:4001/api/auth/steam">
+                  <a href="${process.env.REACT_APP_API_URL}/api/auth/steam">
                     <img alt="Login" src={steamLoginImg} />
                   </a>
                 ) : (

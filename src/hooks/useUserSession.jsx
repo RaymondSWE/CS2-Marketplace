@@ -25,7 +25,7 @@ const useUserSession = () => {
   }, [userSteamId]);
 //Test
   const fetchUserData = async () => {
-    const user = "https://api.csfairtrade.com:4001/api/auth/user";
+    const user = "${process.env.REACT_APP_API_URL}/api/auth/user";
 
     try {
       const res = await axios.get(user, {
@@ -49,7 +49,7 @@ const useUserSession = () => {
   };
 
   const fetchUserBalance = async () => {
-    const userBalance = `https://api.csfairtrade.com:4001/api/user/balance/${userSteamId}`;
+    const userBalance = `${process.env.REACT_APP_API_URL}/api/user/balance/${userSteamId}`;
 
     try {
       const res = await axios.get(userBalance);
@@ -60,7 +60,7 @@ const useUserSession = () => {
   };
 
   const fetchUserEmail = async () => {
-    const userEmail = `https://api.csfairtrade.com:4001/api/user/getUserEmail/${userSteamId}`;
+    const userEmail = `${process.env.REACT_APP_API_URL}/api/user/getUserEmail/${userSteamId}`;
 
     try {
       const res = await axios.get(userEmail);
@@ -71,7 +71,7 @@ const useUserSession = () => {
   };
 
   const fetchUserTradeLink = async () => {
-    const userTradeLink = `https://api.csfairtrade.com:4001/api/user/getTradeLink/${userSteamId}`;
+    const userTradeLink = `${process.env.REACT_APP_API_URL}/api/user/getTradeLink/${userSteamId}`;
 
     try {
       const res = await axios.get(userTradeLink);
@@ -82,7 +82,7 @@ const useUserSession = () => {
   };
 
   const fetchAllUsersCount = async () => {
-    const allUsersCount = `https://api.csfairtrade.com:4001/api/user/allUsersCount`;
+    const allUsersCount = `${process.env.REACT_APP_API_URL}/api/user/allUsersCount`;
 
     try {
       const res = await axios.get(allUsersCount);
@@ -93,11 +93,11 @@ const useUserSession = () => {
   };
 
   const fetchUserItems = async () => {
-    const userItemsUrl = `https://api.csfairtrade.com:4001/api/useritems/for_sale/${userSteamId}`;
+    const userItemsUrl = `${process.env.REACT_APP_API_URL}/api/useritems/for_sale/${userSteamId}`;
 
     try {
       const res = await axios.get(
-        `https://api.csfairtrade.com:4001/api/useritems/for_sale/${userSteamId}`
+        `${process.env.REACT_APP_API_URL}/api/useritems/for_sale/${userSteamId}`
       );
       setUserItems(res.data);
     } catch (error) {
@@ -106,7 +106,7 @@ const useUserSession = () => {
   };
 
   const fetchItemsForSale = async () => {
-    const itemsForSaleUrl = "https://api.csfairtrade.com:4001/api/useritems/for_sale";
+    const itemsForSaleUrl = "${process.env.REACT_APP_API_URL}/api/useritems/for_sale";
 
     try {
       const res = await axios.get(itemsForSaleUrl);
