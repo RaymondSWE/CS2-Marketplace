@@ -27,11 +27,14 @@ const useUserSession = () => {
   const fetchUserData = async () => {
     const user = `${process.env.REACT_APP_API_URL}/api/auth/user`;
 
+    // console log process.env.REACT_APP_API_URL
+    console.log(process.env.REACT_APP_API_URL);
+
     try {
       const res = await axios.get(user, {
         method: "GET",
         headers: {
-          "Access-Control-Allow-Origin": "https://csfairtrade.com",
+          "Access-Control-Allow-Origin": process.env.REACT_APP_API_URL,
           "Content-Type": "application/json",
           "Access-Control-Allow-Credentials": true,
           "Access-Control-Allow-Headers":
