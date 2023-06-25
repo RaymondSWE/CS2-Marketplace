@@ -1,6 +1,6 @@
 # .github/workflows/frontend.yml
 
-name: Frontend CI
+name: frontend CI
 
 on:
   push:
@@ -9,19 +9,21 @@ on:
     branches: [ main ]
 
 jobs:
-  build-and-test:
+  build:
+
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Node.js
+    - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v2
       with:
-        node-version: '18.12.1'
-
-    - name: Install dependencies
-      run: npm ci
-
-
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run test
     - name: Build
-      run: npm run build
+      run: CI=false npm run build
