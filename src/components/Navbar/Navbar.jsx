@@ -34,6 +34,7 @@ const Navbar = () => {
     axios
       .get(`${process.env.REACT_APP_API_URL}/api/auth/user`, {
         withCredentials: true,
+        credentials: "include",
       })
       .then((res) => {
         setResponse(res.data);
