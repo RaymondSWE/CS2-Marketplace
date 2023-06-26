@@ -22,3 +22,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.section-spacing{
+  margin-top: 10rem;
+  margin-bottom: 15rem;
+}

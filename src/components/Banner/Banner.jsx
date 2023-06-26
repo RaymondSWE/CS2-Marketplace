@@ -13,6 +13,7 @@ const Banner = () => {
   const { totalUsers, isUserOnline, userSteamId } = useUserSession();
   const [onlineUsers, setOnlineUsers] = useState(0);
   const { isLoading, socket } = useUserWebsocket();
+  console.log(userSteamId);
 
   useEffect(() => {
     if (!isLoading && socket) {
@@ -145,9 +146,15 @@ const Banner = () => {
           </div>
         </div>
       </section>
-      <SkinPreview />
-      <DiscountedSkinPreview />
-      <MostExpensiveSkinPreview />
+      <div className="section-spacing">
+          <SkinPreview />
+        </div>
+        <div className="section-spacing">
+          <DiscountedSkinPreview />
+        </div>
+        <div className="section-spacing">
+          <MostExpensiveSkinPreview />
+        </div>
     </main>
   );
 };

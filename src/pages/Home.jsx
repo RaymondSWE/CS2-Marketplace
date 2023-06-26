@@ -6,17 +6,17 @@ import Banner from "../components/Banner/Banner";
 import CustomAlert from "../components/CustomAlert/CustomAlert";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import useBotsWebsocket from "../hooks/useBotsWebSocket";
+import "../index.css";
 
 const Home = () => {
-  // Use the custom hook to fetch and update data through WebSockets
+
   const {
     isLoading,
     botInventories,
     getBotInventoriesPrice,
     getBotFloatValue,
   } = useBotsWebsocket();
-  // You can use the data fetched from WebSockets here...
-  // console.log("Bot Inventories:", botInventories); s
+
 
   return (
     <HelmetProvider>
@@ -25,10 +25,21 @@ const Home = () => {
         <meta name="CSFairTrade" content="The market place with low fees" />
       </Helmet>
 
-      <Banner />
-      <ContactUs />
-      <Faq />
-      <TermsConditions />
+      <div className="section-spacing">
+        <Banner />
+      </div>
+      
+      <div className="section-spacing">
+        <ContactUs />
+      </div>
+      
+      <div className="section-spacing">
+        <Faq />
+      </div>
+      
+      <div className="section-spacing">
+        <TermsConditions />
+      </div>
     </HelmetProvider>
   );
 };
