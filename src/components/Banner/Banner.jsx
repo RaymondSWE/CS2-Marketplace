@@ -39,7 +39,7 @@ const Banner = () => {
           <div className="text-center">
             <h4 className="text-white">
               <FaUndo className="primaryText mx-2" />
-              <span className="gradientText">NaN</span>
+              <span className="gradientText">53</span>
             </h4>
             <h6 className="primaryText font-p75rem">TOTAL TRADES</h6>
           </div>
