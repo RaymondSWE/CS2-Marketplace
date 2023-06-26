@@ -10,7 +10,7 @@ import MostExpensiveSkinPreview from "./MostExpensiveSkinPreview";
 import useUserWebsocket from "../../hooks/useUserWebSocket";
 
 const Banner = () => {
-  const { totalUsers, isUserOnline } = useUserSession();
+  const { totalUsers, isUserOnline, userSteamId } = useUserSession();
   const [onlineUsers, setOnlineUsers] = useState(0);
   const { isLoading, socket } = useUserWebsocket();
 
@@ -75,19 +75,23 @@ const Banner = () => {
                     </p>
                   </div>
                   <div className="col-md-8">
-                    <button
-                      className="btn navbarBtn homepageBtn my-2 mr-2 my-sm-0"
-                      onClick={() =>
-                        (window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/steam`)
-                      }
-                    >
-                      <span>
-                        <FaSteamSquare className="mx-2" />
-                      </span>
-                      <span className="text-white GradientBtnWhite">
-                        Sign Up Through Steam
-                      </span>
-                    </button>
+                  {
+                    userSteamId === null && (
+                      <button
+                        className="btn navbarBtn homepageBtn my-2 mr-2 my-sm-0"
+                        onClick={() =>
+                          (window.location.href = `${process.env.REACT_APP_API_URL}/api/auth/steam`)
+                        }
+                      >
+                        <span>
+                          <FaSteamSquare className="mx-2" />
+                        </span>
+                        <span className="text-white GradientBtnWhite">
+                          Sign Up Through Steam
+                        </span>
+                      </button>
+                    )
+                  }
                   </div>
                 </div>
               </div>
