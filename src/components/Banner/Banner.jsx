@@ -13,7 +13,6 @@ const Banner = () => {
   const { totalUsers, isUserOnline, userSteamId } = useUserSession();
   const [onlineUsers, setOnlineUsers] = useState(0);
   const { isLoading, socket } = useUserWebsocket();
-  console.log(userSteamId);
 
   useEffect(() => {
     if (!isLoading && socket) {

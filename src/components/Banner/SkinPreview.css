@@ -48,8 +48,8 @@
 
 .skin-icon {
   justify-self: center;
-  width: 80%;
-  max-height: 80%;
+  width: 150px;
+  height: 150px;
   border-radius: 0.5rem;
   margin-top: 2rem;
   transition: transform 0.3s ease-in-out;
