@@ -14,7 +14,7 @@ header > p {
 }
 
 h2.faqs_head {
-  font-size: 3rem;
+  font-size: 1rem;
   color: #f4f4f6;
   margin-top: 2rem;
   margin-bottom: 1rem;
@@ -45,7 +45,7 @@ summary::marker {
 }
 summary > h4 {
   width: 100%;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
@@ -54,14 +54,14 @@ summary > h4 {
   background-clip: text;
 }
 span {
-  margin-top: 4px;
+  margin-top: 2px;
   color: #f4f4f6;
 }
 
 details > p {
   max-width: 80%;
   color: #a6a0bb;
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 155%;
   letter-spacing: 0.1px;
   margin-bottom: 2.5px;

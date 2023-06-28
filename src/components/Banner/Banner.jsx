@@ -51,6 +51,7 @@ const Banner = () => {
             </h4>
             <h6 className="primaryText font-p75rem">TOTAL USERS</h6>
           </div>
+          
           <div className="text-center">
             <h4 className="text-white">
               <FaRss className="primaryText mx-2" />
@@ -67,6 +68,7 @@ const Banner = () => {
                 <h1 className="display-3 jumbotron-title">
                   Welcome to CSFAIRTRADE
                 </h1>
+    
                 <div className="row">
                   <div className="col-md-8">
                     <p className="jumbotron-description gradientText">

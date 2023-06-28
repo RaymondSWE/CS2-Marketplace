@@ -16,8 +16,8 @@
 }
 
 
-.primaryText {
-  color: var(--text-color) !important;
+.primaryText{
+  color: #92a0bb !important;
 }
 
 /* Detail Container */
@@ -99,6 +99,19 @@ button.navbarBtn.homepageBtn:hover {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
+}
+
+.carousel-item {
+  height: auto;
+  width: auto;
+  z-index: 0;
+}
+
+.carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+
 }
 
 .card {
