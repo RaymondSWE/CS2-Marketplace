@@ -39,6 +39,17 @@ const Faq = () => {
 
                   <details>
                     <summary>
+                      <h4>What are the steps involved in purchasing?</h4>
+                      <HiOutlineChevronDown />
+                    </summary>
+                    <p>
+                    CSFairTrade does not require you to have anactive Steam mobile authenticator.However, you will need to have an active Steam Guard account via email in order to do so. To purchase items, you will only be required to use your balance on the purchasing/buying page. To increase your balance, you will either need to fill your balance or sell an item                    </p>
+                  </details>
+                    <hr />
+
+
+                  <details>
+                    <summary>
                       <h4>How can I buy on CSFairTrade?</h4>
                       <HiOutlineChevronDown />
                     </summary>
