@@ -73,7 +73,6 @@
 }
 
 .skin-name {
-  margin-bottom: 2rem;
   word-wrap: break-word;
   max-width: 80%;
   min-height: 2.5rem;
@@ -221,7 +220,7 @@
   transition: all 0.3s ease-in-out, transform 0.3s ease;
   position: absolute;
   bottom: 1.1rem;
-  left: 0.5rem;
+  left: 1rem;
   color: #f6f3ea;
   border: 2px solid #5cc6ff;
   border-radius: 50px;
