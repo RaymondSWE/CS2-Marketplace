@@ -65,7 +65,7 @@ const SkinPreview = () => {
               key={skin.assetid} // This is a unique identifier for each skin
             >
               <div className="skin-item">
-                <div className="skin-wear gradientText">
+                <div className="skin-wear ">
                   {skin.item_wear} / {parseFloat(skin.paintwear).toFixed(10)}
                 </div>
                 <div

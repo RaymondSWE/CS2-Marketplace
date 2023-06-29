@@ -93,6 +93,7 @@
   background: rgba(19, 17, 24, 0.7);
   border-radius: 0.25rem;
   padding: 0.2rem 0.4rem;
+  color: #92a0bb;
 }
 
 .skin-listedprice {
@@ -105,7 +106,7 @@
 
 .skin-price {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   background: rgba(19, 17, 24, 0.7);
   border-radius: 0.25rem;
