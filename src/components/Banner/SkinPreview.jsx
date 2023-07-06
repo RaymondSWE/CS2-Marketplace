@@ -1,6 +1,5 @@
-import React, { useState, useEffect  } from "react";
+import React, { useState, useEffect } from "react";
 import "./SkinPreview.css";
-import useSkins from "../../hooks/useBotSkins";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,23 +7,25 @@ import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import useSkins from "../../hooks/useBotSkins";
+import { calculateDiscount } from '../../utils/utils';
 
-const SkinPreview = () => {
+
+
+const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
   const skins = useSkins(1);
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(5); // Set initial items to show
+  const [itemsToShow, setItemsToShow] = useState(initialItemsToShow || 5); // Set initial items to show based on prop or default value
 
-  const sortedSkins = [...skins].sort(
-    (a, b) => a.listed_price - b.listed_price
-  );
+  // Use passed sort function
+  const sortedSkins = [...skins].sort(sortFunc);
 
-  // On mount and when window resizes, update items to show based on window width
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
 
-      if (width <= 1200) {
+      if (width <= 1300) {
         setItemsToShow(3);
       } else if (width <= 1669) {
         setItemsToShow(4);
@@ -33,16 +34,12 @@ const SkinPreview = () => {
       }
     };
     
-    // Call the function once to get the initial state
     handleResize();
 
-    // Set the event listener
     window.addEventListener('resize', handleResize);
 
-    // Cleanup the event listener on component unmount
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-      
 
   const handleSkinClick = (skin) => {
     window.location.href = `/buy`;
@@ -59,9 +56,15 @@ const SkinPreview = () => {
   const handleNavigationClick = (direction) => {
     if (direction === "previous" && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-    } else if (direction === "next" && currentIndex < sortedSkins.length - 5) {
+    } else if (
+      direction === "next" &&
+      currentIndex < sortedSkins.length - itemsToShow
+    ) {
       setCurrentIndex(currentIndex + 1);
-    } else if (direction === "next" && currentIndex >= sortedSkins.length - 5) {
+    } else if (
+      direction === "next" &&
+      currentIndex >= sortedSkins.length - itemsToShow
+    ) {
       toast.info("There are no more skins to preview", {
         theme: "colored",
       });
@@ -71,7 +74,7 @@ const SkinPreview = () => {
 
   return (
     <div className="skin-preview-container">
-      <h2 className="skin-preview-title">Lowest Tier Weapons</h2>
+    <h2 className="skin-preview-title">{title}</h2>
       <div className="skins-grid">
         <button
           onClick={() => handleNavigationClick("previous")}
@@ -88,9 +91,7 @@ const SkinPreview = () => {
             skin.price
           );
           return (
-            <div
-              key={skin.assetid} // This is a unique identifier for each skin
-            >
+            <div key={skin.assetid}>
               <div className="skin-item">
                 <div className="skin-wear ">
                   {skin.item_wear} / {parseFloat(skin.paintwear).toFixed(10)}

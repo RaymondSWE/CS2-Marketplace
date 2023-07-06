@@ -5,9 +5,8 @@ import useUserSession from "../../hooks/useUserSession";
 import { FaRss, FaSteamSquare, FaUndo, FaUsers } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import SkinPreview from "./SkinPreview";
-import DiscountedSkinPreview from "./DiscountedSkinPreview";
-import MostExpensiveSkinPreview from "./MostExpensiveSkinPreview";
 import useUserWebsocket from "../../hooks/useUserWebSocket";
+import { calculateDiscount } from '../../utils/utils';
 
 const Banner = () => {
   const { totalUsers, isUserOnline, userSteamId } = useUserSession();
@@ -148,14 +147,24 @@ const Banner = () => {
         </div>
       </section>
       <div className="section-spacing">
-          <SkinPreview />
-        </div>
-        <div className="section-spacing">
-          <DiscountedSkinPreview />
-        </div>
-        <div className="section-spacing">
-          <MostExpensiveSkinPreview />
-        </div>
+      <SkinPreview 
+        title="Lowest Tier Skins" 
+        sortFunc={(a, b) => a.listed_price - b.listed_price}
+      />
+    </div>
+    <div className="section-spacing">
+      <SkinPreview 
+        title="Highest Tier Skins" 
+        sortFunc={(a, b) => b.price - a.price}
+      />
+    </div>
+    <div className="section-spacing">
+      <SkinPreview 
+        title="Higest Discount" 
+        sortFunc={(a, b) => calculateDiscount(a.listed_price, a.price) - calculateDiscount(b.listed_price, b.price)}
+      />
+    </div>
+
     </main>
   );
 };
