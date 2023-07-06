@@ -23,7 +23,7 @@ const BuyCard = () => {
     setTotal(
       state.addCard
         .reduce((acc, curr) => acc + Number(curr.price), 0)
-        .toFixed(2)
+        .toFixed(2),
     );
   }, [state.addCard]);
 

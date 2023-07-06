@@ -13,7 +13,7 @@ const BuyModal = ({ state, total }) => {
   };
   const totalPrice = state.addCard.reduce(
     (total, skin) => total + skin.price,
-    0
+    0,
   );
 
   const { balance } = useUserSession(); // Get the balance from the useUserSession hook

@@ -81,7 +81,7 @@ const BuySkinCard = (props) => {
                   <span className="Stattrak-gradientText">StatTrak™ </span>
                 ) : (
                   word + " "
-                )
+                ),
               )}
           </span>
 

@@ -60,7 +60,7 @@ const WithdrawSkinsModal = ({ handleCloseWithdraw, showModal }) => {
         </span>
       ) : (
         word + " "
-      )
+      ),
     );
   };
 

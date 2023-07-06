@@ -7,7 +7,7 @@ import CheckoutForm from "./CheckoutForm";
 // recreating the Stripe object on every render.
 // This is your test publishable API key.
 const stripePromise = loadStripe(
-  "pk_live_51M7MaJC80eeCracaz0IiWmMxVBsHmHeyEKUpIzvmxTgp8NTkhJNNu4YkLVLLKuBfijIye6r5G8Uvup96EUYmaeJp00y8V1PYts"
+  "pk_live_51M7MaJC80eeCracaz0IiWmMxVBsHmHeyEKUpIzvmxTgp8NTkhJNNu4YkLVLLKuBfijIye6r5G8Uvup96EUYmaeJp00y8V1PYts",
 );
 
 export default function PaymentMethod() {

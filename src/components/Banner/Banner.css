@@ -26,7 +26,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
-  margin-top: 5rem;
 }
 
 .detailContainer div {
@@ -38,7 +37,6 @@
   box-shadow: 0 1rem 0.3rem var(--box-shadow-color);
   width: 100%;
   max-width: 300px;
-  margin-bottom: 5rem;
 }
 
 .detailContainer > div > h6 {
@@ -57,25 +55,19 @@
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 2px;
-  margin-bottom: 2rem;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(73.6deg, var(--primary-color) 2.11%, var(--secondary-color) 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: pulse-c6zlskmd 2s ease-out infinite, slideIn 1s ease-out;
 }
 
 .jumbotron-description {
   font-size: 1.25rem;
   line-height: 1.5;
-  margin-bottom: 2rem;
   animation: slideIn 1s ease-out;
 }
 
 
-.section-spacing {
-  margin-bottom: 10rem;
-  margin-top: 10rem;
-}
+
 
 .bannerCard:hover {
   transform: translateY(-10px);

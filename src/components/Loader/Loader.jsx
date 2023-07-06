@@ -7,7 +7,7 @@ const Loader = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setLoadingProgress((prevProgress) =>
-        prevProgress >= 100 ? 100 : prevProgress + 1
+        prevProgress >= 100 ? 100 : prevProgress + 1,
       );
     }, 100);
 

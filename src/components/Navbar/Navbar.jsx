@@ -41,7 +41,7 @@ const Navbar = () => {
         if (!res.data.email) {
           axios
             .get(
-              `${process.env.REACT_APP_API_URL}/api/user/getUserEmailWithNull/${res.data.id}`
+              `${process.env.REACT_APP_API_URL}/api/user/getUserEmailWithNull/${res.data.id}`,
             )
             .then((res) => {
               if (res.data.users.length) {
@@ -161,7 +161,6 @@ const Navbar = () => {
     return (
       <a
         href={`${process.env.REACT_APP_API_URL}/api/auth/steam`}
-        
         style={{ background: "transparent" }}
       >
         <img alt="Login" src={steamLoginImg} />

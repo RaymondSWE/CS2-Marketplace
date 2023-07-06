@@ -217,7 +217,7 @@ const TransactionHistory = () => {
   const indexOfFirstTransaction = indexOfLastTransaction - transactionsPerPage;
   const currentTransactions = transactions.slice(
     indexOfFirstTransaction,
-    indexOfLastTransaction
+    indexOfLastTransaction,
   );
 
   // Logic for displaying page numbers

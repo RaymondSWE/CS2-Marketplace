@@ -9,14 +9,12 @@ import useBotsWebsocket from "../hooks/useBotsWebSocket";
 import "../index.css";
 
 const Home = () => {
-
   const {
     isLoading,
     botInventories,
     getBotInventoriesPrice,
     getBotFloatValue,
   } = useBotsWebsocket();
-
 
   return (
     <HelmetProvider>
@@ -28,15 +26,15 @@ const Home = () => {
       <div className="section-spacing">
         <Banner />
       </div>
-      
+
       <div className="section-spacing">
         <ContactUs />
       </div>
-      
+
       <div className="section-spacing">
         <Faq />
       </div>
-      
+
       <div className="section-spacing">
         <TermsConditions />
       </div>

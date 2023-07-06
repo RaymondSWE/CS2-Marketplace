@@ -6,7 +6,7 @@ import { FaRss, FaSteamSquare, FaUndo, FaUsers } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import SkinPreview from "./SkinPreview";
 import useUserWebsocket from "../../hooks/useUserWebSocket";
-import { calculateDiscount } from '../../utils/utils';
+import { calculateDiscount } from "../../utils/utils";
 
 const Banner = () => {
   const { totalUsers, isUserOnline, userSteamId } = useUserSession();
@@ -31,9 +31,12 @@ const Banner = () => {
     }
   }, [socket]);
 
+  console.log(userSteamId);
+
   return (
     <main role="main">
-      <section className="welcome-section section-spacing">
+      {/* Welcome section with number of trades, users and online users --< */}
+      <section className="welcome-section">
         <div className="detailContainer">
           <div className="text-center">
             <h4 className="text-white">
@@ -49,7 +52,7 @@ const Banner = () => {
             </h4>
             <h6 className="primaryText font-p75rem">TOTAL USERS</h6>
           </div>
-          
+
           <div className="text-center">
             <h4 className="text-white">
               <FaRss className="primaryText mx-2" />
@@ -66,7 +69,7 @@ const Banner = () => {
                 <h1 className="display-3 jumbotron-title">
                   Welcome to CSFAIRTRADE
                 </h1>
-    
+
                 <div className="row">
                   <div className="col-md-8">
                     <p className="jumbotron-description gradientText">
@@ -76,8 +79,7 @@ const Banner = () => {
                     </p>
                   </div>
                   <div className="col-md-8">
-                  {
-                    userSteamId === null && (
+                    {userSteamId == null ? (
                       <button
                         className="btn navbarBtn homepageBtn my-2 mr-2 my-sm-0"
                         onClick={() =>
@@ -91,8 +93,7 @@ const Banner = () => {
                           Sign Up Through Steam
                         </span>
                       </button>
-                    )
-                  }
+                    ) : null}
                   </div>
                 </div>
               </div>
@@ -101,6 +102,7 @@ const Banner = () => {
         </div>
       </section>
 
+      {/* // Info cards section */}
       <section className="card-container section-spacing">
         <div className="card">
           <div className="card-header">
@@ -120,8 +122,8 @@ const Banner = () => {
           </div>
           <div className="card-body">
             <p className="card-text">
-              The CSFairtrade team will be available in discord at all times,
-              as well as through email.
+              The CSFairtrade team will be available in discord at all times, as
+              well as through email.
               <a
                 href="https://discord.gg/Kk4UDSpCzx"
                 target="_blank"
@@ -146,25 +148,28 @@ const Banner = () => {
           </div>
         </div>
       </section>
+      {/* // Section for displaying different types of skins */}
       <div className="section-spacing">
-      <SkinPreview 
-        title="Lowest Tier Skins" 
-        sortFunc={(a, b) => a.listed_price - b.listed_price}
-      />
-    </div>
-    <div className="section-spacing">
-      <SkinPreview 
-        title="Highest Tier Skins" 
-        sortFunc={(a, b) => b.price - a.price}
-      />
-    </div>
-    <div className="section-spacing">
-      <SkinPreview 
-        title="Higest Discount" 
-        sortFunc={(a, b) => calculateDiscount(a.listed_price, a.price) - calculateDiscount(b.listed_price, b.price)}
-      />
-    </div>
-
+        <SkinPreview
+          title="Lowest Tier Skins"
+          sortFunc={(a, b) => a.listed_price - b.listed_price}
+        />
+      </div>
+      <div className="section-spacing">
+        <SkinPreview
+          title="Highest Tier Skins"
+          sortFunc={(a, b) => b.price - a.price}
+        />
+      </div>
+      <div className="section-spacing">
+        <SkinPreview
+          title="Higest Discount"
+          sortFunc={(a, b) =>
+            calculateDiscount(a.listed_price, a.price) -
+            calculateDiscount(b.listed_price, b.price)
+          }
+        />
+      </div>
     </main>
   );
 };

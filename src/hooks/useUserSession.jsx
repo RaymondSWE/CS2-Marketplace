@@ -9,8 +9,7 @@ const useUserSession = () => {
   const [totalUsers, setTotalUsers] = useState(0);
   const [userItems, setUserItems] = useState([]);
   const [itemsForSale, setItemsForSale] = useState([]);
-  
-  
+
   useEffect(() => {
     fetchUserData();
     fetchAllUsersCount();
@@ -23,10 +22,9 @@ const useUserSession = () => {
       fetchUserTradeLink();
     }
   }, [userSteamId]);
-//Test
+  //Test
   const fetchUserData = async () => {
     const user = `${process.env.REACT_APP_API_URL}/api/auth/user`;
-
 
     try {
       const res = await axios.get(user, {
@@ -98,7 +96,7 @@ const useUserSession = () => {
 
     try {
       const res = await axios.get(
-        `${process.env.REACT_APP_API_URL}/api/useritems/for_sale/${userSteamId}`
+        `${process.env.REACT_APP_API_URL}/api/useritems/for_sale/${userSteamId}`,
       );
       setUserItems(res.data);
     } catch (error) {

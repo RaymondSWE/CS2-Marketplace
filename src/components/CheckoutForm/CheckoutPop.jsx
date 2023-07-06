@@ -9,7 +9,7 @@ import PaymentCard from "./PaymentCard";
 // recreating the Stripe object on every render.
 // This is your test publishable API key.
 const stripePromise = loadStripe(
-  "pk_test_51M7MaJC80eeCracaJLY2hyVkdlEiEgc4OJcnkTT5ikkYSa4cZU3yA51S5yhKkHYdgsarJNN3uEMP08MQxNaE41IX00pX6NmJx6"
+  "pk_test_51M7MaJC80eeCracaJLY2hyVkdlEiEgc4OJcnkTT5ikkYSa4cZU3yA51S5yhKkHYdgsarJNN3uEMP08MQxNaE41IX00pX6NmJx6",
 );
 
 export default function CheckoutPop() {

@@ -9,7 +9,7 @@ export const cardReducer = (state, action) => {
       return {
         ...state,
         addCard: state.addCard.filter(
-          (c) => c.assetid !== action.payload.assetid
+          (c) => c.assetid !== action.payload.assetid,
         ),
       };
     case "ACTIONS_CALL_API": {

@@ -45,7 +45,7 @@ const Deposit = ({ handleCloseDeposit, showModal }) => {
   const handleSubmit = () => {
     // You would call your API here to process the deposit
     alert(
-      `Amount: ${amount}\nBonus: ${fee}\nPayment Method: ${paymentMethod.name}`
+      `Amount: ${amount}\nBonus: ${fee}\nPayment Method: ${paymentMethod.name}`,
     );
   };
 
