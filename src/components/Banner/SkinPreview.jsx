@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect  } from "react";
 import "./SkinPreview.css";
 import useSkins from "../../hooks/useBotSkins";
 import { ToastContainer, toast } from "react-toastify";
@@ -11,11 +11,38 @@ import {
 
 const SkinPreview = () => {
   const skins = useSkins(1);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(5); // Set initial items to show
+
   const sortedSkins = [...skins].sort(
     (a, b) => a.listed_price - b.listed_price
   );
-  const [currentIndex, setCurrentIndex] = useState(0);
-  // console.log(skins);
+
+  // On mount and when window resizes, update items to show based on window width
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+
+      if (width <= 1200) {
+        setItemsToShow(3);
+      } else if (width <= 1669) {
+        setItemsToShow(4);
+      } else {
+        setItemsToShow(5);
+      }
+    };
+    
+    // Call the function once to get the initial state
+    handleResize();
+
+    // Set the event listener
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+      
 
   const handleSkinClick = (skin) => {
     window.location.href = `/buy`;
@@ -32,9 +59,9 @@ const SkinPreview = () => {
   const handleNavigationClick = (direction) => {
     if (direction === "previous" && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-    } else if (direction === "next" && currentIndex < sortedSkins.length - 6) {
+    } else if (direction === "next" && currentIndex < sortedSkins.length - 5) {
       setCurrentIndex(currentIndex + 1);
-    } else if (direction === "next" && currentIndex >= sortedSkins.length - 6) {
+    } else if (direction === "next" && currentIndex >= sortedSkins.length - 5) {
       toast.info("There are no more skins to preview", {
         theme: "colored",
       });
@@ -55,7 +82,7 @@ const SkinPreview = () => {
             className="skin-navigation-icon"
           />
         </button>
-        {sortedSkins.slice(currentIndex, currentIndex + 6).map((skin) => {
+        {sortedSkins.slice(currentIndex, currentIndex + itemsToShow).map((skin) => {
           const discountPercentage = calculateDiscount(
             skin.listed_price,
             skin.price

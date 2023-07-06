@@ -4,14 +4,11 @@
   flex-wrap: wrap;
   justify-content: center;
   font-family: 'Barlow', sans-serif;
-  margin-bottom: 10rem;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: column;  align-items: center;
   background-color: #131118;
   border-radius: 0.5rem;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
-  transform-style: preserve-3d;
-  perspective: 500px;
+  width: 100%;
 }
 
 .skins-grid {
@@ -122,7 +119,7 @@
   background-color: #131118;
   color: #5cc6ff;
   font-weight: bold;
-  width: 100px;
+  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,7 +246,6 @@
   font-weight: bold;
   margin-bottom: 1rem;
   text-align: center;
-  margin-top: 1rem;
 }
 
 @media (max-width: 1024px) {
