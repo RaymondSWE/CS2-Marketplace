@@ -8,8 +8,11 @@
 }
 
 .gridBox .gridBoxContent:hover {
-  box-shadow: 0 0 15px #5cc6ff;
+  background-color: rgba(31, 28, 35, 1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
 }
+  
 
 
 /* Select Box */

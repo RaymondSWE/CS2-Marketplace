@@ -112,6 +112,7 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
                     src={`https://steamcommunity-a.akamaihd.net/economy/image/${skin.image}`}
                     alt={skin.market_hash_name}
                     className="skin-icon"
+                    loading="lazy"
                   />
                   <div className="skin-info">
                     <div className="skin-name primaryTextColor">
