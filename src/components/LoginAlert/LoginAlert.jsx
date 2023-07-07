@@ -4,7 +4,7 @@ import { Modal, Button } from "react-bootstrap";
 const LoginAlert = ({ show, handleClose }) => {
   return (
     <Modal show={show} onHide={handleClose} centered>
-      <Modal.Header closeButton>
+      <Modal.Header>
         <Modal.Title>Login Required</Modal.Title>
       </Modal.Header>
       <Modal.Body>
@@ -14,7 +14,7 @@ const LoginAlert = ({ show, handleClose }) => {
       </Modal.Body>
       <Modal.Footer>
         <Button
-          className="btn Darkbtn shadow px-4 my-2 mr-2 my-sm-0"
+          className="Darkbtn shadow px-4 my-2 mr-2 my-sm-0"
           variant="secondary"
           onClick={handleClose}
         >
@@ -22,7 +22,7 @@ const LoginAlert = ({ show, handleClose }) => {
         </Button>
         <a
           href={`${process.env.REACT_APP_API_URL}/api/auth/steam`}
-          className="btn GradientBtn my-2 px-4 mr-2 my-sm-0 text-white"
+          className="GradientBtn  px-4 mr-2 my-sm-0 text-white"
         >
           Log In
         </a>
