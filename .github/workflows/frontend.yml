@@ -26,4 +26,4 @@ jobs:
     - run: npm ci
    # - run: npm run test no tesst currently
     - name: Build
-      run: CI=false npm run build
+      run: CI=true npm run build
