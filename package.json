@@ -35,7 +35,9 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "proxy": "https://csfairtrade.com",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+
   },
   "eslintConfig": {
     "extends": [
