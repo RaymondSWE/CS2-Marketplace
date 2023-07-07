@@ -89,3 +89,7 @@ it('should handle REMOVE_FROM_CARD action for non-existing item', () => {
   };
   expect(cardReducer(state, action)).toEqual(expectedState);
 });
+
+
+//TODO:: Write test for when a item has been bought user should not be able to add it to card
+//TODO:: Write test for adding card action for non-existing item
