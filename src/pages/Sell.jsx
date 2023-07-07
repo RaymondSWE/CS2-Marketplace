@@ -14,7 +14,7 @@ const Sell = () => {
   const { userSteamId } = useUserSession();
 
   return (
-    <>
+    <HelmetProvider>
       <Helmet>
         <title>CSFairTrade || Sell Inventory</title>
         <meta
@@ -42,7 +42,7 @@ const Sell = () => {
           />
         </>
       )}
-    </>
+    </HelmetProvider>
   );
 };
 
