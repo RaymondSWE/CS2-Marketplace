@@ -1,6 +1,0 @@
-E2E stands for "end-to-end" testing. End-to-end testing is a method of testing an application or system as a whole, simulating the real-world interactions of users with the system. 
-The purpose of e2e tests is to ensure that the application behaves correctly from the user's perspective, by testing the full stack of the application, 
-from the user interface to the back-end services.
-
-E2E tests are different from unit tests, which test individual components or functions in isolation, and integration tests, 
-which test how different components or modules of the application interact with each other.
