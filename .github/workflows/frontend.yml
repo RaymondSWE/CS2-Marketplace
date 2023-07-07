@@ -1,5 +1,3 @@
-# .github/workflows/frontend.yml
-
 name: frontend CI
 
 on:
@@ -24,6 +22,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
-   # - run: npm run test no tesst currently
+    - name: Test
+      run: npm run test
     - name: Build
-      run: CI=true npm run build
+      run: CI=false npm run build
