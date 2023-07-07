@@ -1,5 +1,5 @@
 // Utils.test.js
-import { calculateDiscount } from '../utils/utils';
+import { calculateDiscount } from '../../utils/utils';
 
 describe('utils', () => {
   describe('calculateDiscount', () => {
