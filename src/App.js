@@ -23,8 +23,8 @@ const App = () => {
           <Route path="/sell" element={<Sell />} />
           <Route path="/exchange" element={<Exchange />} />
         </Routes>
+        <Footer name="CSFAIRTRADE" />
       </Scrollbars>
-      <Footer name="CSFAIRTRADE" />
     </>
   );
 };

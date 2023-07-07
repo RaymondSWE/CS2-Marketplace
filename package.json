@@ -10,9 +10,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@fortawesome/react-fontawesome": "^0.1.14",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@stripe/react-stripe-js": "^1.16.0",
     "@stripe/stripe-js": "^1.46.0",
     "@testing-library/jest-dom": "^5.16.5",
