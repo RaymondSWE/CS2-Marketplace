@@ -34,7 +34,7 @@ const ContactUs = () => {
 
                 <form>
                   <div className="form-group">
-                    <label className="gradientText" for="inputEmail">
+                    <label className="gradientText" htmlFor="inputEmail">
                       Email address
                     </label>
                     <input
@@ -49,7 +49,7 @@ const ContactUs = () => {
                     </small>
                   </div>
                   <div className="form-group">
-                    <label className="gradientText" for="contactUsMessage">
+                    <label className="gradientText" htmlFor="contactUsMessage">
                       Your message
                     </label>
                     <textarea
