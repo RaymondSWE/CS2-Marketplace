@@ -61,8 +61,8 @@ const Deposit = ({ handleCloseDeposit, showModal }) => {
       </div>
       <div className="form-section">
         <div>
-          <label className="gradientText">Amount:</label>
-          <input type="number" value={amount} onChange={handleAmountChange} />
+          <label className="gradientText" htmlFor="amount">Amount:</label>
+          <input type="number" id="amount" value={amount} onChange={handleAmountChange} />
         </div>
         <div>
           <div className="amount-options">
@@ -88,6 +88,7 @@ const Deposit = ({ handleCloseDeposit, showModal }) => {
                 }`}
                 key={index}
                 onClick={() => handlePaymentOptionClick(option)}
+                data-testid={option.name}
               >
                 {option.name}
               </div>
