@@ -23,7 +23,6 @@ describe('Faq', () => {
     expect(screen.getByText('How long does a withdrawal take?')).toBeInTheDocument();
     expect(screen.getByText('Why do I have a payment and withdrawal limit?')).toBeInTheDocument();
     expect(screen.getByText('Can I refund money which I have already deposited to my CSFairTrade account?')).toBeInTheDocument();
-
   });
 
   it('renders all faq answers', () => {

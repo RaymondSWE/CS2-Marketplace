@@ -1,15 +1,22 @@
 {
   "name": "csfairtrade",
   "jest": {
-    "verbose": true,
-    "moduleFileExtensions": [
-      "js",
-      "jsx"
+    "setupFiles": [
+      "dotenv/config"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
     ],
     "moduleNameMapper": {
       "\\.(css|less|scss|sass)$": "<rootDir>/__mocks__/styleMock.js",
       "\\.(jpg|jpeg|png|gif|webp|svg)$": "<rootDir>/__mocks__/fileMock.js"
     },
+    "verbose": true,
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
     "testEnvironment": "jsdom"
   },
   "version": "0.1.0",
@@ -68,7 +75,9 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "13.1",
     "babel-jest": "^29.6.1",
+    "dotenv": "^16.3.1",
     "fetch-mock": "^9.11.0",
+    "fetch-mock-jest": "^1.5.1",
     "jest": "^27.5.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
