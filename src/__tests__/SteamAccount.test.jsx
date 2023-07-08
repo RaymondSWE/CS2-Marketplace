@@ -117,6 +117,16 @@ it('closes the modal when "Close" button is clicked', async () => {
 });
 
 
+it('displays error message when steamid is not available', async () => {
+  const mockPropsWithoutSteamID = { response: { _json: null } };
+  render(<SteamAccount {...mockPropsWithoutSteamID} />);
+  
+  const errorMessage = screen.getByText('Error: steamid is not available');
+  expect(errorMessage).toBeInTheDocument();
+});
+
+
+
 
 
 

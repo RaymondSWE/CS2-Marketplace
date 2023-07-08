@@ -80,6 +80,7 @@ const SteamAccount = (props) => {
                 height="70"
                 className="userImage rounded-circle my-3"
                 alt=""
+                
               />
               <span className="accountName mt-0">
                 {props.response.hasOwnProperty("displayName")
