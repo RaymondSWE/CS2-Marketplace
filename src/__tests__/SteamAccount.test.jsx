@@ -87,11 +87,36 @@ describe('SteamAccount', () => {
     });
   });
 
+
   it('displays user avatar correctly', async () => {
     render(<SteamAccount {...mockProps} />);
     const avatarImage = screen.getByAltText('');
     expect(avatarImage).toHaveAttribute('src', mockProps.response._json.avatarfull);
 });
+
+it('displays trade URL instruction correctly', async () => {
+  render(<SteamAccount {...mockProps} />);
+  
+  const tradeURLInstruction = screen.getByText('How to get a Steam trade URL?');
+  const instructionText = screen.getByText('CSFairTrade requires a Steam trade URL for trading. The steam trade URL can be obtained by clicking the "Click here to get trade URL" button and you will be redirected to the Valve website. Copy the URL and paste it below. Click "Apply" to save your trade URL');
+  const getTradeURLButton = screen.getByText('Click here to get trade URL');
+  
+  expect(tradeURLInstruction).toBeInTheDocument();
+  expect(instructionText).toBeInTheDocument();
+  expect(getTradeURLButton).toBeInTheDocument();
+});
+
+it('closes the modal when "Close" button is clicked', async () => {
+  render(<SteamAccount {...mockProps} />);
+  
+  const closeButton = screen.getByText('Close');
+  fireEvent.click(closeButton);
+  
+  const modal = screen.queryByTestId('steam-account-modal');
+  expect(modal).not.toBeInTheDocument();
+});
+
+
 
 
 
