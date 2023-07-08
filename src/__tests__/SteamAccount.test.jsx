@@ -2,7 +2,7 @@ import React from "react";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
 import SteamAccount from "../components/SteamAccount/SteamAccount";
 import "@testing-library/jest-dom";
-import fetchMock from "fetch-mock-jest";
+import fetchMock from "fetch-mock";
 import { toast } from "react-toastify";
 
 jest.mock("react-toastify", () => ({
