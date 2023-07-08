@@ -35,9 +35,9 @@ describe('SteamAccount', () => {
 
   it('displays user name correctly', async () => {
     render(<SteamAccount {...mockProps} />);
-    // replace getByText with findByText to wait for the element to appear
     expect(await screen.findByText('Test User')).toBeInTheDocument();
   });
+
   it('validates trade link correctly', async () => {
     render(<SteamAccount {...mockProps} />);
     const inputField = screen.getByPlaceholderText('Enter your Trade URL here');
@@ -49,5 +49,52 @@ describe('SteamAccount', () => {
       expect(toast.error).toHaveBeenCalledWith('Invalid Steam trade link', { theme: "colored" });
     });
   });
+
+  it('handles successful trade link update correctly', async () => {
+    const tradeUrl = `${process.env.REACT_APP_API_URL}/api/user/addUserTradeLink`;
+    const successfulResponse = { success: true };
+    fetchMock.post(tradeUrl, successfulResponse);
   
+    render(<SteamAccount {...mockProps} />);
+    const inputField = screen.getByPlaceholderText('Enter your Trade URL here');
+    const applyButton = screen.getByText('Apply');
+    fireEvent.change(inputField, { target: { value: 'https://steamcommunity.com/tradeoffer/new/?partner=354634030&token=KAoqD920' } });
+    fireEvent.click(applyButton);
+  
+    await waitFor(() => {
+      const lastCall = fetchMock.lastCall(tradeUrl);
+      expect(lastCall).toBeDefined();
+    });
+  
+    await waitFor(() => {
+      expect(toast.success).toHaveBeenCalledWith('Trade Link added successfully!', { theme: "colored" });
+    });
+  });
+
+  it('handles trade link update error correctly', async () => {
+    const tradeUrl = `${process.env.REACT_APP_API_URL}/api/user/addUserTradeLink`;
+    const errorResponse = { error: 'Server error' };
+    fetchMock.post(tradeUrl, { status: 500, body: errorResponse });
+    
+    render(<SteamAccount {...mockProps} />);
+    const inputField = screen.getByPlaceholderText('Enter your Trade URL here');
+    const applyButton = screen.getByText('Apply');
+    fireEvent.change(inputField, { target: { value: 'https://steamcommunity.com/tradeoffer/new/?partner=354634030&token=KAoqD920' } });
+    fireEvent.click(applyButton);
+    
+    await waitFor(() => {
+      expect(toast.error).toHaveBeenCalledWith('Server error', { theme: "colored" });
+    });
+  });
+
+  it('displays user avatar correctly', async () => {
+    render(<SteamAccount {...mockProps} />);
+    const avatarImage = screen.getByAltText('');
+    expect(avatarImage).toHaveAttribute('src', mockProps.response._json.avatarfull);
+});
+
+
+
+  
+
 });
