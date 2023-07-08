@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@500&family=Poppins:wght@700&display=swap");
 
 .navbar {
   padding: 15px 10px;
@@ -9,13 +9,13 @@
 }
 
 .navbar-brand {
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 32px;
   text-align: center;
-  letter-spacing: 0.10em;
+  letter-spacing: 0.1em;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
@@ -24,26 +24,22 @@
 }
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 0.5rem 1rem !important;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   color: #ffffff;
   transition: 0.3s;
 }
-.nav-link
-{
-  margin-right: 15px
+.nav-link {
+  margin-right: 15px;
 }
 
 .navbar-dark .navbar-nav .active > .nav-link {
   background: transparent;
   box-shadow: inset 0px -2px 0px #ffffff;
   transition: 0.3s;
-  
 }
-
-
 
 .user-detail-container {
   background: #1c1924;
@@ -67,7 +63,7 @@
 }
 
 .btn.fill-balance {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 14px;
   background-color: #1c1924;
@@ -87,19 +83,20 @@
 }
 
 .user-detail-container .login-user-name {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-  
 }
 
 .user-detail-container .login-user-img {
@@ -118,12 +115,14 @@
   text-align: inherit;
   white-space: nowrap;
   border: 0;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 24px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;

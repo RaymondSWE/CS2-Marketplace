@@ -19,7 +19,7 @@ h5.contactUs-title {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
@@ -45,8 +45,15 @@ form {
 }
 
 .contactUsBtn {
-  background-image: linear-gradient(90deg, #85ffc486 0%, #27a1e2 50%, #bc85ff 100%);
-  transition: background-image 0.3s ease, transform 0.3s;
+  background-image: linear-gradient(
+    90deg,
+    #85ffc486 0%,
+    #27a1e2 50%,
+    #bc85ff 100%
+  );
+  transition:
+    background-image 0.3s ease,
+    transform 0.3s;
   border-bottom: 1px solid #5cc6ff;
   box-shadow: 0 0 10px #5cc6ff;
 }

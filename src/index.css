@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 body {
@@ -23,8 +22,7 @@ code {
     monospace;
 }
 
-
-.section-spacing{
+.section-spacing {
   margin-top: 5rem;
   margin-bottom: 10rem;
 }

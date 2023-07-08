@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding: 1.5rem;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #f6f3ea;
   background: #131118;
   border-radius: 1rem;
@@ -74,21 +74,24 @@
   font-size: 0.8rem;
 }
 
-
 .price {
   font-weight: bold;
 }
 
 .withdraw-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
   line-height: 20px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
   padding: 0.3rem 0.75rem;
   cursor: pointer;
-  transition: all 0.3s ease-in-out, transform 0.3s ease;
+  transition:
+    all 0.3s ease-in-out,
+    transform 0.3s ease;
   color: #f6f3ea;
   background: transparent;
   border: 2px solid #5cc6ff;
@@ -107,7 +110,6 @@
   cursor: not-allowed;
 }
 
-
 .arrow-button {
   position: absolute;
   top: calc(50% - 20px);
@@ -123,7 +125,9 @@
   align-items: center;
   font-size: 1.5rem;
   z-index: 10;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .arrow-button.left {
@@ -164,7 +168,6 @@
   margin-bottom: 10px;
 }
 
-
 @media (max-width: 600px) {
   .withdraw-component {
     padding: 1rem;
@@ -186,7 +189,6 @@
     font-size: 0.7rem;
   }
 
-
   .withdraw-button {
     font-size: 10px;
     line-height: 16px;
@@ -206,7 +208,12 @@
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
-  background: -webkit-linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  background: -webkit-linear-gradient(
+    73.6deg,
+    #85ffc4 2.11%,
+    #5cc6ff 42.39%,
+    #bc85ff 85.72%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 200% 100%;
@@ -215,8 +222,12 @@
 }
 
 @keyframes shimmer {
-  0% { background-position: -100% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 @media (max-width: 600px) {

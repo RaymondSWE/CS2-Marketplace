@@ -6,7 +6,7 @@ html {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   grid-gap: 1rem;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   cursor: pointer;
 }
 
@@ -33,7 +33,6 @@ h6.error {
   background: #131118;
   border-radius: 1rem;
   height: auto;
-
 }
 .gradientText {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -100,7 +99,6 @@ span.discountPercent {
   color: #00dbc7 !important;
   font-size: 1.15rem;
 }
-
 
 .itemName {
   white-space: nowrap;
@@ -182,11 +180,10 @@ span.discountPercent {
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   border-radius: 100px;
   border: none;
-
 }
 
 span.GradientBtnWhite {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -426,14 +423,16 @@ span.darkModeBtn {
   font-weight: 700;
   font-size: 14px; /* Increase the font size */
   line-height: 20px;
-  font-feature-settings: "pnum" on, "lnum" on;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
 }
 .shareBtn {
   color: #92a0bb !important;
   padding: 8px 16px;
   background: #1c1924;
   border-radius: 1rem;
-    border: 2px solid #5cc6ff;
+  border: 2px solid #5cc6ff;
   border-radius: 50px;
   box-shadow: 0 0 8px #5cc6ff;
 }
@@ -462,7 +461,6 @@ span.darkModeBtn {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 
 .login-section h2 {
   margin-bottom: 1rem;
@@ -518,10 +516,6 @@ span.darkModeBtn {
 .login-section form {
   animation-delay: 0.6s;
 }
-
-
-
-
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   figure > svg {

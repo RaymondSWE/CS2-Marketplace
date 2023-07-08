@@ -1,20 +1,17 @@
 .form#payment-form {
-    width: 100%;
-  }
-  
-  div#payment-element {
-    margin: 7.5% 3%;
-  }
-  
-  .btn-container {
-    width: 100%;
-    text-align: center;
-    display: flex;
-  }
-  
+  width: 100%;
+}
 
-  
-  #zenPayModal {
-    z-index: 9999;
-  }
-  
+div#payment-element {
+  margin: 7.5% 3%;
+}
+
+.btn-container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+}
+
+#zenPayModal {
+  z-index: 9999;
+}

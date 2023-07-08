@@ -7,7 +7,7 @@
 .nav-pills .nav-link.active {
   color: white;
 }
-input[type='radio'] {
+input[type="radio"] {
   margin-right: 5px;
 }
 .bold {

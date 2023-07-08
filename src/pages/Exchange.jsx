@@ -31,11 +31,11 @@ const Exchange = () => {
         setUnderConstruction={setUnderConstruction}
       />
       <div style={{ filter: underConstruction ? "blur(8px)" : "none" }}>
-          <>
-            <Sidebar mainBody={<ExchangeBody />} placeholder="Search Market" />
-            <Faq />
-            <TermsConditions />
-          </>
+        <>
+          <Sidebar mainBody={<ExchangeBody />} placeholder="Search Market" />
+          <Faq />
+          <TermsConditions />
+        </>
       </div>
     </HelmetProvider>
   );

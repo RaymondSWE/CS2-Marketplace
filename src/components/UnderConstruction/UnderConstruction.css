@@ -28,7 +28,6 @@
   z-index: 5;
 }
 
-
 .close-icon {
   fill: #fff;
   border-radius: 50%;
@@ -44,7 +43,12 @@
 .underconstruction-gradientText {
   font-size: 2.5rem;
   padding-bottom: 1rem;
-  background: linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  background: linear-gradient(
+    73.6deg,
+    #85ffc4 2.11%,
+    #5cc6ff 42.39%,
+    #bc85ff 85.72%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -74,4 +78,3 @@
   transform: translateY(-3px);
   box-shadow: 0 0 25px #5cc6ff;
 }
-

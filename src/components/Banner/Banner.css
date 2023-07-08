@@ -15,8 +15,7 @@
   margin-top: 15px;
 }
 
-
-.primaryText{
+.primaryText {
   color: #92a0bb !important;
 }
 
@@ -30,8 +29,9 @@
 
 .detailContainer div {
   background: #131118;
-    box-shadow:  -20px -20px 40px #111, 
-                20px 20px 40px #191919;
+  box-shadow:
+    -20px -20px 40px #111,
+    20px 20px 40px #191919;
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 1rem 0.3rem var(--box-shadow-color);
@@ -55,7 +55,12 @@
   font-size: 4rem;
   font-weight: 800;
   letter-spacing: 2px;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), linear-gradient(73.6deg, var(--primary-color) 2.11%, var(--secondary-color) 85.72%);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(
+      73.6deg,
+      var(--primary-color) 2.11%,
+      var(--secondary-color) 85.72%
+    );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -66,24 +71,22 @@
   animation: slideIn 1s ease-out;
 }
 
-
-
-
 .bannerCard:hover {
   transform: translateY(-10px);
   box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 button.navbarBtn.homepageBtn:hover {
   border-color: #5cc6ff;
   transform: translateY(-3px);
   box-shadow: 0 0 25px #5cc6ff;
-    box-shadow: 10px 10px 20px #5cc6ff, 
-             -10px -10px 20px #5cc6ff; /* Create neumorphism effect */
+  box-shadow:
+    10px 10px 20px #5cc6ff,
+    -10px -10px 20px #5cc6ff; /* Create neumorphism effect */
 }
-
 
 .card-container {
   display: flex;
@@ -103,7 +106,6 @@ button.navbarBtn.homepageBtn:hover {
   height: 100%;
   object-fit: cover;
   z-index: 0;
-
 }
 
 .card {
@@ -112,10 +114,11 @@ button.navbarBtn.homepageBtn:hover {
   color: var(--text-color);
   box-shadow: 0 1rem 0.3rem var(--box-shadow-color);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   margin: 30px;
   background-color: rgba(19, 17, 24, 0.4);
-
 }
 
 .card-header {
@@ -126,7 +129,12 @@ button.navbarBtn.homepageBtn:hover {
 .card-title {
   color: #fff;
   text-transform: uppercase;
-  background: -webkit-linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  background: -webkit-linear-gradient(
+    73.6deg,
+    #85ffc4 2.11%,
+    #5cc6ff 42.39%,
+    #bc85ff 85.72%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -143,10 +151,7 @@ button.navbarBtn.homepageBtn:hover {
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 1.5rem 1.5rem rgba(0, 0, 0, 0.25);
-
 }
-
-
 
 @media (max-width: 768px) {
   .card-container {
@@ -157,7 +162,6 @@ button.navbarBtn.homepageBtn:hover {
     margin-bottom: 2rem;
   }
 }
-
 
 /* Mobile First styles (<=480px) */
 @media (max-width: 480px) {
@@ -216,7 +220,7 @@ button.navbarBtn.homepageBtn:hover {
 }
 
 /* Medium devices (>768px) */
-@media (min-width: 769px)  and (max-width: 1300px) {
+@media (min-width: 769px) and (max-width: 1300px) {
   .jumbotron-title {
     font-size: 3rem;
   }

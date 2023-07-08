@@ -19,7 +19,7 @@ h2.tcs_head {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;

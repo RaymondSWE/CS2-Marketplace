@@ -1,10 +1,8 @@
-
 /* Grid Box Content */
 .gridBox .gridBoxContent {
   position: relative;
   background-color: rgba(31, 28, 35, 0.8);
   border-radius: 1rem;
-
 }
 
 .gridBox .gridBoxContent:hover {
@@ -12,8 +10,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease;
 }
-  
-
 
 /* Select Box */
 .selectBox {
@@ -26,14 +22,13 @@
   left: 0;
 }
 
-
 /* Discount */
 .discountGreen {
   background: linear-gradient(73.6deg, #85ffc4 2.11%, #00db77 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   font-weight: bold;
 }
 
@@ -42,11 +37,9 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  font-size: 0.8rem; 
+  font-size: 0.8rem;
   font-weight: bold;
 }
-
-
 
 /* Buttons */
 .Darkbtn,
@@ -57,17 +50,16 @@
   border-radius: 100px;
 }
 
-
-  /* Modal */
-  .balanceContainer{
+/* Modal */
+.balanceContainer {
   width: 100%;
   text-align: end;
   font-size: 1rem;
-  }
+}
 
-  /* CSS rule for the button */
+/* CSS rule for the button */
 .buy-modal-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -90,15 +82,13 @@
   box-shadow: 0 0 25px #5cc6ff;
 }
 
- 
 .modal-backdrop {
   z-index: 0 !important;
 }
-  
+
 .modal {
   z-index: 5;
 }
-
 
 /* Total Amount Container */
 .totalAmountContainer {
@@ -114,7 +104,7 @@
   font-size: 1.5rem;
   color: #92a0bb;
 }
-    
+
 /* Cancel Button */
 .cancelBtn {
   color: #92a0bb !important;
@@ -123,32 +113,29 @@
   border-radius: 100px;
   border: none;
 }
-    
 
-  
 /* Responsive Design */
-  @media screen and (max-width: 768px) {
-    .font-p75rem {
+@media screen and (max-width: 768px) {
+  .font-p75rem {
     font-size: 0.65rem;
-    }
-    
-    .font-p85rem {
+  }
+
+  .font-p85rem {
     font-size: 0.75rem;
-    }
-    
-    .font-1rem {
+  }
+
+  .font-1rem {
     font-size: 0.9rem;
-    }
-    
-    .font-2halfrem {
+  }
+
+  .font-2halfrem {
     font-size: 2rem;
-    }
-    
-    .gridBox {
+  }
+
+  .gridBox {
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     font-size: 2rem;
-    }
-
+  }
 }
 
 /* Disable Select */

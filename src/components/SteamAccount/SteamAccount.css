@@ -5,13 +5,10 @@
   box-shadow: 0 0 5px #5cc6ff;
 }
 
-
-
 .modal-title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: bold;
 }
-
 
 .container {
   padding: 20px;
@@ -26,19 +23,20 @@
 }
 
 .accountName {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
   line-height: 24px;
-  font-feature-settings: 'pnum' on, 'lnum' on;
+  font-feature-settings:
+    "pnum" on,
+    "lnum" on;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
-
 }
 
 .trade-url-instruction {
@@ -47,10 +45,8 @@
   color: #aaa;
 }
 
-
-
 .gradient-button {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   color: #fff;
   text-align: center;
@@ -74,9 +70,8 @@
   margin-top: 20px;
 }
 
-
 .steamAccount-button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -93,5 +88,3 @@
   transform: translateY(-3px);
   box-shadow: 0 0 25px #5cc6ff;
 }
-
-

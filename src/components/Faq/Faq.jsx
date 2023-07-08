@@ -256,7 +256,8 @@ const Faq = () => {
                   <details>
                     <summary>
                       <h4>
-                        Can I refund money which I have already deposited to my CSFairTrade account?
+                        Can I refund money which I have already deposited to my
+                        CSFairTrade account?
                       </h4>
                       <HiOutlineChevronDown />
                     </summary>

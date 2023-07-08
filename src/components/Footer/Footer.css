@@ -21,7 +21,6 @@ footer {
   align-items: flex-end;
 }
 
-
 .copyright {
   font-family: "Barlow", sans-serif;
   font-style: normal;
@@ -74,5 +73,4 @@ nav ul.footer-content > .nav-item > .nav-link:hover {
     align-items: center;
     padding: 1rem;
   }
-
 }

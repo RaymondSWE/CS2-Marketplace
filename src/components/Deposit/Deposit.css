@@ -9,7 +9,7 @@
   background: #131118;
   border-radius: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 900px; 
+  max-width: 900px;
   margin: 0 auto;
   border: 1px solid #5cc6ff;
   box-shadow: 0 0 10px #5cc6ff;
@@ -27,7 +27,6 @@
   justify-content: center;
   z-index: 5;
 }
-
 
 .close-button {
   position: absolute;
@@ -52,19 +51,19 @@
 .deposit-component .summary-section {
   padding: 2.5rem;
   background: rgb(24, 22, 29);
-  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1.5rem;
-  color: #f6f3ea; 
-  font-size: 1.2rem; 
+  color: #f6f3ea;
+  font-size: 1.2rem;
 }
 
 .deposit-component .summary-section label {
-  font-size: 1.5rem; 
-  margin-bottom: 1rem; 
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .deposit-component .summary-section p {
-  line-height: 1.5; 
+  line-height: 1.5;
   position: relative;
 }
 
@@ -80,12 +79,16 @@
   box-shadow: 0 0 10px #5cc6ff;
 }
 
-
 /* CSS rule for gradient text */
 .deposit-component .gradientText {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  background: linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+  background: linear-gradient(
+    73.6deg,
+    #85ffc4 2.11%,
+    #5cc6ff 42.39%,
+    #bc85ff 85.72%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -94,7 +97,7 @@
 .deposit-component .bonus {
   font-size: 1.2rem;
   font-weight: bold;
-  background: linear-gradient(to right, #008000, #ADFF2F);
+  background: linear-gradient(to right, #008000, #adff2f);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -105,18 +108,19 @@
 }
 
 .deposit-component .total-label {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-  linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
+    linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 /* CSS rule for the input and select elements */
-.deposit-component input, .deposit-component select {
+.deposit-component input,
+.deposit-component select {
   margin-bottom: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
@@ -128,7 +132,7 @@
 
 /* CSS rule for the button */
 .deposit-component button {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 700;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -150,53 +154,52 @@
   display: flex;
   justify-content: space-between;
   margin-top: 0.5rem;
-  align-items: center; 
-  gap: 1rem; 
+  align-items: center;
+  gap: 1rem;
 }
 
 .deposit-component .payment-option {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   padding: 1rem;
-  border: 2px solid transparent; 
+  border: 2px solid transparent;
   border-radius: 25%;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
 
 .deposit-component .payment-option:hover {
   background: rgba(92, 198, 255, 0.1);
-  border-color: #5cc6ff; 
+  border-color: #5cc6ff;
 }
 
 .deposit-component .payment-option.selected {
   background: rgba(92, 198, 255, 0.2);
-  border-color: #5cc6ff; 
-  transform: scale(1.1); 
+  border-color: #5cc6ff;
+  transform: scale(1.1);
 }
 
 /* CSS rule for amount options */
 .deposit-component .amount-options {
   display: flex;
-  justify-content: space-around; 
+  justify-content: space-around;
   padding: 1rem 0;
   gap: 0.5rem;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .deposit-component .amount-option {
   cursor: pointer;
-  padding: 0.5rem 1rem; 
-  border-radius: 30px; 
-  border: 1px solid #5cc6ff; 
-  transition: all 0.3s ease-in-out; 
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: 1px solid #5cc6ff;
+  transition: all 0.3s ease-in-out;
   background: rgba(19, 17, 24, 0.8);
   color: #f6f3ea;
-  text-align: center; 
-  flex: 1 1 auto; 
+  text-align: center;
+  flex: 1 1 auto;
 }
-
 
 .deposit-component .amount-option:hover {
   border-color: #5cc6ff;
@@ -205,6 +208,6 @@
 }
 
 .deposit-component .amount-option:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
   background: rgba(92, 198, 255, 0.3);
 }

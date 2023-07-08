@@ -1,17 +1,15 @@
-
 .modal-content {
-    background: rgba(5, 5, 25, 0.9);
-    border-radius: 25px;
-    color: #fff;
-    border: none;
-    overflow: hidden;
+  background: rgba(5, 5, 25, 0.9);
+  border-radius: 25px;
+  color: #fff;
+  border: none;
+  overflow: hidden;
 }
 
 .modal-title {
-    font-weight: 700;
-    font-size: 1.5em;
+  font-weight: 700;
+  font-size: 1.5em;
 }
-
 
 .table-transactionhistory {
   color: #fff;
@@ -21,7 +19,6 @@
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  
 }
 
 .table-transactionhistory th,
@@ -35,31 +32,30 @@
   text-align: left;
 }
 
-
 .close {
-    color: #ff0000; /* Red */
-    opacity: 1;
+  color: #ff0000; /* Red */
+  opacity: 1;
 }
 
 .close:hover {
-    color: #ff4040; /* Lighter red */
+  color: #ff4040; /* Lighter red */
 }
 
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .page-link {
-    background: #5cc6ff; /* Neon green */
-    color: #000;
-    border-radius: 50%;
-    padding: 5px 10px;
-    margin: 0 5px;
-    cursor: pointer;
-    border: none;
-    transition: all 0.3s ease;
+  background: #5cc6ff; /* Neon green */
+  color: #000;
+  border-radius: 50%;
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
 }
 
 .page-link:hover {
@@ -68,14 +64,12 @@
   box-shadow: 0 0 25px #5cc6ff;
 }
 
-
-
 .btn:focus {
-    box-shadow: 0 0 10px rgba(0, 255, 127, 0.5); /* Neon green with some transparency */
+  box-shadow: 0 0 10px rgba(0, 255, 127, 0.5); /* Neon green with some transparency */
 }
 
 input.form-control:focus,
 textarea.form-control:focus {
-    border-color: #5cc6ff;
-    box-shadow: 0 0 8px rgba(0, 255, 127, 0.5); /* Neon green with some transparency */
+  border-color: #5cc6ff;
+  box-shadow: 0 0 8px rgba(0, 255, 127, 0.5); /* Neon green with some transparency */
 }

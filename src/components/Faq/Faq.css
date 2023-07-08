@@ -19,7 +19,7 @@ h2.faqs_head {
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(73.6deg, #85ffc4 2.11%, #5cc6ff 42.39%, #bc85ff 85.72%);
   -webkit-background-clip: text;
@@ -41,7 +41,7 @@ summary {
 
 summary::marker {
   display: none;
-  content: '';
+  content: "";
 }
 summary > h4 {
   width: 100%;
@@ -75,8 +75,6 @@ hr {
   margin-block: 20px;
 }
 
-
-
 @media only screen and (min-width: 300px) and (max-width: 600px) {
   .faq-section {
     max-width: 90%;
@@ -107,7 +105,6 @@ hr {
     font-size: 0.85rem;
   }
 }
-
 
 /* Add these new styles */
 .scroll-to-top-button {

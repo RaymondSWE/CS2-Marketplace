@@ -1,11 +1,9 @@
 .col-md-4 {
-    border-left: 7px double #92a0bb;
+  border-left: 7px double #92a0bb;
 }
 
 @media only screen and (min-width: 300px) and (max-width: 600px) {
-    .col-md-4 {
-        border:none;
-    }
-   
-    
+  .col-md-4 {
+    border: none;
+  }
 }

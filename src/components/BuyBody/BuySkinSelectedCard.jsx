@@ -60,7 +60,11 @@ const BuySkinSelectedCard = (props) => {
 
   return (
     <>
-      <div className="gridBoxContent" id={`buyGrid${props.assetid}`} data-testid={`buyGrid${props.assetid}`}>
+      <div
+        className="gridBoxContent"
+        id={`buyGrid${props.assetid}`}
+        data-testid={`buyGrid${props.assetid}`}
+      >
         <div className="d-flex">
           <div className="price">${props.listed_price}</div>
           <div
