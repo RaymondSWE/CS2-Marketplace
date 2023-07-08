@@ -21,9 +21,6 @@ describe('ContactUs', () => {
     expect(screen.getByText('Submit')).toBeInTheDocument();
   });
 
-  // If your component had functionality like form submission, you'd write a test for that too. 
-  // But since your ContactUs component doesn't seem to actually handle the form submission, 
-  // there's nothing to test in that regard yet.
 
   // TODO:: Add form submission test once its implemented for the component
 });
