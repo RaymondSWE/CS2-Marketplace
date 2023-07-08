@@ -11,10 +11,11 @@ describe('SteamAccount', () => {
       _json: {
         steamid: '123456',
         avatarfull: '',
-        displayName: 'Test User'
-      }
+      },
+      displayName: 'Test User'
     }
   };
+  
 
   beforeEach(() => {
     fetchMock.reset();
@@ -25,5 +26,10 @@ describe('SteamAccount', () => {
     expect(screen.getByText('Connect your Steam trade link to your account!')).toBeInTheDocument();
   });
 
+  it('displays user name correctly', async () => {
+    render(<SteamAccount {...mockProps} />);
+    // replace getByText with findByText to wait for the element to appear
+    expect(await screen.findByText('Test User')).toBeInTheDocument();
+  });
   
 });

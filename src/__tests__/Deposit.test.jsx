@@ -5,6 +5,8 @@ import '@testing-library/jest-dom';
 import { FaGooglePay, FaCreditCard, FaPaypal } from "react-icons/fa";
 import Modal from "react-modal";
 
+Modal.setAppElement(document.body);
+
 describe('Deposit', () => {
   const handleCloseDepositMock = jest.fn();
 
