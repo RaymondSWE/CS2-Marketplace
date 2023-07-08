@@ -11,7 +11,6 @@ import BuyCard from "./BuyCard";
 import { cardReducer } from "./reducer";
 import Loader from "../Loader/Loader";
 import { toast, ToastContainer } from "react-toastify";
-import axios from "axios";
 import useSkins from "../../hooks/useBotSkins";
 import useBotsWebsocket from "../../hooks/useBotsWebSocket";
 

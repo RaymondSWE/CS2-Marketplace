@@ -159,8 +159,6 @@ button.navbarBtn.homepageBtn:hover {
 }
 
 
-/* Keep your original CSS code as it is */
-
 /* Mobile First styles (<=480px) */
 @media (max-width: 480px) {
   .jumbotron-title {
@@ -218,9 +216,9 @@ button.navbarBtn.homepageBtn:hover {
 }
 
 /* Medium devices (>768px) */
-@media (min-width: 769px) {
+@media (min-width: 769px)  and (max-width: 1300px) {
   .jumbotron-title {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .jumbotron-description {

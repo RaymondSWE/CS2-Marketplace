@@ -10,9 +10,6 @@ import Scrollbars from "react-custom-scrollbars-2";
 import { toast } from "react-toastify";
 
 const BuySkinSelectedCard = (props) => {
-  const fnColor = "D2D2D2";
-  const wwColor = "CF6A32";
-
   let history = useNavigate();
 
   const {
@@ -63,7 +60,7 @@ const BuySkinSelectedCard = (props) => {
 
   return (
     <>
-      <div className="gridBoxContent" id={`buyGrid${props.assetid}`}>
+      <div className="gridBoxContent" id={`buyGrid${props.assetid}`} data-testid={`buyGrid${props.assetid}`}>
         <div className="d-flex">
           <div className="price">${props.listed_price}</div>
           <div

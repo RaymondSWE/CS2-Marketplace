@@ -1,4 +1,4 @@
-import { cardReducer } from '../components/BuyBody/reducer'; 
+import { cardReducer } from '../components/SellBody/reducer'; 
 
 describe('cardReducer', () => {
   it('should handle ADD_TO_CARD action', () => {
@@ -38,7 +38,7 @@ describe('cardReducer', () => {
       data: { data: 'newData' },
     };
     const expectedState = {
-      buyData: action.data,
+      sellData: action.data,
       addCard: [],
     };
     expect(cardReducer(state, action)).toEqual(expectedState);
@@ -54,7 +54,6 @@ describe('cardReducer', () => {
     expect(cardReducer(state, action)).toEqual(state);
   });
 });
-
 
 it('should handle multiple ADD_TO_CARD actions', () => {
   const state = {
@@ -75,7 +74,6 @@ it('should handle multiple ADD_TO_CARD actions', () => {
   expect(cardReducer(newState, action2)).toEqual(expectedState);
 });
 
-
 it('should handle REMOVE_FROM_CARD action for non-existing item', () => {
   const state = {
     addCard: [{ assetid: '1', name: 'test', qty: 1 }],
@@ -89,5 +87,3 @@ it('should handle REMOVE_FROM_CARD action for non-existing item', () => {
   };
   expect(cardReducer(state, action)).toEqual(expectedState);
 });
-
-
