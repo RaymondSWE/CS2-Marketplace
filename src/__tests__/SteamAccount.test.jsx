@@ -126,10 +126,16 @@ it('displays error message when steamid is not available', async () => {
 });
 
 
-
-
-
-
+it('updates the trade link input field correctly', async () => {
+  render(<SteamAccount {...mockProps} />);
   
+  const inputField = screen.getByPlaceholderText('Enter your Trade URL here');
+  const newTradeLink = 'https://steamcommunity.com/tradeoffer/new/?partner=123456&token=abcdef';
+  
+  fireEvent.change(inputField, { target: { value: newTradeLink } });
+  
+  expect(inputField.value).toBe(newTradeLink);
+});
+
 
 });
