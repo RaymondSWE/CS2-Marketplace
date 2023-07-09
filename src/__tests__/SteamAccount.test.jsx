@@ -26,7 +26,7 @@ describe("SteamAccount", () => {
   beforeEach(() => {
     fetchMock.reset();
   });
-//test
+  //test
   it("renders without crashing", () => {
     render(<SteamAccount {...mockProps} />);
     expect(
@@ -116,7 +116,6 @@ describe("SteamAccount", () => {
 
   it("displays trade URL instruction correctly", async () => {
     render(<SteamAccount {...mockProps} />);
-
     const tradeURLInstruction = screen.getByText(
       "How to get a Steam trade URL?",
     );
@@ -124,7 +123,6 @@ describe("SteamAccount", () => {
       'CSFairTrade requires a Steam trade URL for trading. The steam trade URL can be obtained by clicking the "Click here to get trade URL" button and you will be redirected to the Valve website. Copy the URL and paste it below. Click "Apply" to save your trade URL',
     );
     const getTradeURLButton = screen.getByText("Click here to get trade URL");
-
     expect(tradeURLInstruction).toBeInTheDocument();
     expect(instructionText).toBeInTheDocument();
     expect(getTradeURLButton).toBeInTheDocument();
@@ -132,10 +130,8 @@ describe("SteamAccount", () => {
 
   it('closes the modal when "Close" button is clicked', async () => {
     render(<SteamAccount {...mockProps} />);
-
     const closeButton = screen.getByText("Close");
     fireEvent.click(closeButton);
-
     const modal = screen.queryByTestId("steam-account-modal");
     expect(modal).not.toBeInTheDocument();
   });
@@ -143,20 +139,43 @@ describe("SteamAccount", () => {
   it("displays error message when steamid is not available", async () => {
     const mockPropsWithoutSteamID = { response: { _json: null } };
     render(<SteamAccount {...mockPropsWithoutSteamID} />);
-
     const errorMessage = screen.getByText("Error: steamid is not available");
     expect(errorMessage).toBeInTheDocument();
   });
 
   it("updates the trade link input field correctly", async () => {
     render(<SteamAccount {...mockProps} />);
-
     const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
     const newTradeLink =
       "https://steamcommunity.com/tradeoffer/new/?partner=123456&token=abcdef";
-
     fireEvent.change(inputField, { target: { value: newTradeLink } });
-
     expect(inputField.value).toBe(newTradeLink);
   });
+
+  it("does not display incorrect user name", async () => {
+    render(<SteamAccount {...mockProps} />);
+    expect(screen.queryByText("Incorrect User")).not.toBeInTheDocument();
+  });
+
+  it("does not display incorrect error message", async () => {
+    render(<SteamAccount {...mockProps} />);
+    const incorrectErrorMessage = screen.queryByText(
+      "Incorrect error message"
+    );
+    expect(incorrectErrorMessage).not.toBeInTheDocument();
+  });
+
+  it("does not display incorrect trade URL instruction", async () => {
+    render(<SteamAccount {...mockProps} />);
+    const incorrectInstruction = screen.queryByText(
+      "Incorrect instruction text"
+    );
+    expect(incorrectInstruction).not.toBeInTheDocument();
+  });
+
+  
+  
+  
+
+  
 });
