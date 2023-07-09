@@ -5,7 +5,6 @@ import GradientBtn from "../GradientButton/GradientBtn";
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import steamLoginImg from "../../assets/icon/steam_signin_large.png";
 import axios from "axios";
-import PaymentMethod from "../StripCard/PaymentMethod";
 import Deposit from "../Deposit/Deposit";
 import SteamAccount from "../SteamAccount/SteamAccount";
 import SignUpModal from "../SignUpModal/SignUpModal";
