@@ -26,7 +26,7 @@ describe("SteamAccount", () => {
   beforeEach(() => {
     fetchMock.reset();
   });
-
+//test
   it("renders without crashing", () => {
     render(<SteamAccount {...mockProps} />);
     expect(
