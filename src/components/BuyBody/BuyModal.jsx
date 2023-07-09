@@ -5,7 +5,6 @@ import BuySkinCard from "./BuySkinCard";
 import Scrollbars from "react-custom-scrollbars-2";
 import useUserSession from "../../hooks/useUserSession";
 import "./BuyBody.css"; // import the CSS file
-import ZenPayModal from "../zenpay/ZenPayModal";
 
 const BuyModal = ({ state, total }) => {
   const handlePurchase = () => {
