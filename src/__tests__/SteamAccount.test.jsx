@@ -4,6 +4,7 @@ import SteamAccount from "../components/SteamAccount/SteamAccount";
 import "@testing-library/jest-dom";
 import fetchMock from "fetch-mock";
 import { toast } from "react-toastify";
+console.error = jest.fn();
 
 jest.mock("react-toastify", () => ({
   toast: {
@@ -26,20 +27,24 @@ describe("SteamAccount", () => {
   beforeEach(() => {
     fetchMock.reset();
   });
+
+  afterAll(() => {
+    jest.restoreAllMocks();
+  });
   //test
-  it("renders without crashing", () => {
+  it("should render SteamAccount component without throwing an error", () => {
     render(<SteamAccount {...mockProps} />);
     expect(
       screen.getByText("Connect your Steam trade link to your account!"),
     ).toBeInTheDocument();
   });
 
-  it("displays user name correctly", async () => {
+  it("should correctly display the user name from provided props", async () => {
     render(<SteamAccount {...mockProps} />);
     expect(await screen.findByText("Test User")).toBeInTheDocument();
   });
 
-  it("validates trade link correctly", async () => {
+  it("should validate the trade link and display an error toast when the link is invalid", async () => {
     render(<SteamAccount {...mockProps} />);
     const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
     const applyButton = screen.getByText("Apply");
@@ -53,7 +58,7 @@ describe("SteamAccount", () => {
     });
   });
 
-  it("handles successful trade link update correctly", async () => {
+  it("should handle successful trade link updates by making the correct API call and displaying a success toast", async () => {
     const tradeUrl = `${process.env.REACT_APP_API_URL}/api/user/addUserTradeLink`;
     const successfulResponse = { success: true };
     fetchMock.post(tradeUrl, successfulResponse);
@@ -82,7 +87,7 @@ describe("SteamAccount", () => {
     });
   });
 
-  it("handles trade link update error correctly", async () => {
+  it("should handle trade link update errors by displaying an error toast with the server error message", async () => {
     const tradeUrl = `${process.env.REACT_APP_API_URL}/api/user/addUserTradeLink`;
     const errorResponse = { error: "Server error" };
     fetchMock.post(tradeUrl, { status: 500, body: errorResponse });
@@ -105,7 +110,7 @@ describe("SteamAccount", () => {
     });
   });
 
-  it("displays user avatar correctly", async () => {
+  it("should correctly display the user avatar from the provided props", async () => {
     render(<SteamAccount {...mockProps} />);
     const avatarImage = screen.getByAltText("");
     expect(avatarImage).toHaveAttribute(
@@ -114,7 +119,7 @@ describe("SteamAccount", () => {
     );
   });
 
-  it("displays trade URL instruction correctly", async () => {
+  it("should display correct instructions for obtaining a Steam trade URL", async () => {
     render(<SteamAccount {...mockProps} />);
     const tradeURLInstruction = screen.getByText(
       "How to get a Steam trade URL?",
@@ -128,7 +133,7 @@ describe("SteamAccount", () => {
     expect(getTradeURLButton).toBeInTheDocument();
   });
 
-  it('closes the modal when "Close" button is clicked', async () => {
+  it('should close the modal when the Close-button is clicked', async () => {
     render(<SteamAccount {...mockProps} />);
     const closeButton = screen.getByText("Close");
     fireEvent.click(closeButton);
@@ -136,14 +141,14 @@ describe("SteamAccount", () => {
     expect(modal).not.toBeInTheDocument();
   });
 
-  it("displays error message when steamid is not available", async () => {
+  it("should display an error message when the steamid is not available in the response", async () => {
     const mockPropsWithoutSteamID = { response: { _json: null } };
     render(<SteamAccount {...mockPropsWithoutSteamID} />);
     const errorMessage = screen.getByText("Error: steamid is not available");
     expect(errorMessage).toBeInTheDocument();
   });
 
-  it("updates the trade link input field correctly", async () => {
+  it("should correctly update the value of the trade link input field when changed", async () => {
     render(<SteamAccount {...mockProps} />);
     const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
     const newTradeLink =
@@ -152,12 +157,12 @@ describe("SteamAccount", () => {
     expect(inputField.value).toBe(newTradeLink);
   });
 
-  it("does not display incorrect user name", async () => {
+  it("should not display incorrect user names not present in the props", async () => {
     render(<SteamAccount {...mockProps} />);
     expect(screen.queryByText("Incorrect User")).not.toBeInTheDocument();
   });
 
-  it("does not display incorrect error message", async () => {
+  it("should not display incorrect error messages not returned by the server", async () => {
     render(<SteamAccount {...mockProps} />);
     const incorrectErrorMessage = screen.queryByText(
       "Incorrect error message"
@@ -165,7 +170,7 @@ describe("SteamAccount", () => {
     expect(incorrectErrorMessage).not.toBeInTheDocument();
   });
 
-  it("does not display incorrect trade URL instruction", async () => {
+  it("should not display any incorrect instructions for obtaining a Steam trade URL", async () => {
     render(<SteamAccount {...mockProps} />);
     const incorrectInstruction = screen.queryByText(
       "Incorrect instruction text"
@@ -173,9 +178,31 @@ describe("SteamAccount", () => {
     expect(incorrectInstruction).not.toBeInTheDocument();
   });
 
+  it("should handle changes to the trade link input field correctly and update the field's value", () => {
+    render(<SteamAccount {...mockProps} />);
+    const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
+    const newTradeLink = "https://steamcommunity.com/tradeoffer/new/?partner=123456&token=abcdef";
+    fireEvent.change(inputField, { target: { value: newTradeLink } });
+    expect(inputField.value).toBe(newTradeLink);
+  });
+
+  it("should handle network errors during trade link updates by logging the error to the console", async () => {
+    const tradeUrl = `${process.env.REACT_APP_API_URL}/api/user/addUserTradeLink`;
+    const networkError = new Error("Network Error");
+    fetchMock.post(tradeUrl, () => { throw networkError });
   
+    render(<SteamAccount {...mockProps} />);
+    const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
+    const applyButton = screen.getByText("Apply");
+    fireEvent.change(inputField, {
+      target: { value: "https://steamcommunity.com/tradeoffer/new/?partner=354634030&token=KAoqD920" },
+    });
+    fireEvent.click(applyButton);
   
-  
+    await waitFor(() => {
+      expect(console.error).toHaveBeenCalledWith(networkError);
+    });
+  });
 
   
 });
