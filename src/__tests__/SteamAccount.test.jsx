@@ -4,6 +4,8 @@ import SteamAccount from "../components/SteamAccount/SteamAccount";
 import "@testing-library/jest-dom";
 import fetchMock from "fetch-mock";
 import { toast } from "react-toastify";
+import renderer from 'react-test-renderer';
+
 console.error = jest.fn();
 
 jest.mock("react-toastify", () => ({
@@ -37,6 +39,12 @@ describe("SteamAccount", () => {
     expect(
       screen.getByText("Connect your Steam trade link to your account!"),
     ).toBeInTheDocument();
+  });
+  it('should render SteamAccount correctly', () => {
+    const tree = renderer
+      .create(<SteamAccount {...mockProps} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
   });
 
   it("should correctly display the user name from provided props", async () => {
