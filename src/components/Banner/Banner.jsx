@@ -31,7 +31,6 @@ const Banner = () => {
     }
   }, [socket]);
 
-  console.log(userSteamId);
 
   return (
     <main role="main">

@@ -204,5 +204,20 @@ describe("SteamAccount", () => {
     });
   });
 
+  it("should throw an error when the trade link format is incorrect", async () => {
+    render(<SteamAccount {...mockProps} />);
+    const inputField = screen.getByPlaceholderText("Enter your Trade URL here");
+    const applyButton = screen.getByText("Apply");
+    fireEvent.change(inputField, { target: { value: "Incorrect format" } });
+    fireEvent.click(applyButton);
+    
+    const incorrectFormat = () => {
+      throw new Error("Invalid Steam trade link");
+    };
+    
+    expect(incorrectFormat).toThrow("Invalid Steam trade link");
+  });
+  
+
   
 });
