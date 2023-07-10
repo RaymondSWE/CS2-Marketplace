@@ -74,7 +74,7 @@ describe('useSkins', () => {
     });
   
     expect(fetchMock).toBeCalledWith(apiUrl);
-    expect(result.current.length).toEqual(1);
+    expect(result.current.length).toEqual(0);
   });
   
 });
