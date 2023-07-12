@@ -91,13 +91,13 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
                   <div className="skin-wear ">
                     {skin.item_wear} / {parseFloat(skin.paintwear).toFixed(10)}
                   </div>
-                  <div
-                    className={`skin-discount ${
-                      discountPercentage < 0 ? "discountGreen" : "discountRed"
-                    }`}
-                  >
-                    {discountPercentage}%
-                  </div>
+                  {discountPercentage > 0 && (
+                    <div
+                      className={`skin-discount discountColor`}
+                    >
+                      {discountPercentage}%
+                    </div>
+                  )}
                   <img
                     src={`https://steamcommunity-a.akamaihd.net/economy/image/${skin.image}`}
                     alt={skin.market_hash_name}

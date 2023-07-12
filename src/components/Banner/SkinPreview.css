@@ -187,19 +187,13 @@
   right: 0.25rem;
 }
 
-.discountGreen {
+.discountColor {
   background: linear-gradient(73.6deg, #85ffc4 2.11%, #00db77 85.72%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.discountRed {
-  background: linear-gradient(73.6deg, #ff8575 2.11%, #db002b 85.72%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
 
 .buy-button {
   font-family: "Poppins", sans-serif;
