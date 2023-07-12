@@ -8,7 +8,6 @@ const useSkins = (botId) => {
 
     fetch(apiUrl)
       .then((response) => {
-        console.log("Fetching:", apiUrl); // Console log the fetching URL
         if (response.ok) {
           return response.json();
         } else {

@@ -37,7 +37,6 @@ const Navbar = () => {
       })
       .then((res) => {
         setResponse(res.data);
-        console.log(res.data);
 
         if (!res.data.email) {
           axios
