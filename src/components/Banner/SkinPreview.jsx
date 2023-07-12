@@ -3,12 +3,14 @@ import "./SkinPreview.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSteam } from '@fortawesome/free-brands-svg-icons';
 import {
   faChevronLeft,
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 import useSkins from "../../hooks/useBotSkins";
 import { calculateDiscount } from "../../utils/utils";
+
 
 const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
   const skins = useSkins(1);
@@ -43,13 +45,6 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
     window.location.href = `/buy`;
   };
 
-  const calculateDiscount = (listedPrice, marketPrice) => {
-    const discount =
-      ((parseFloat(listedPrice) - parseFloat(marketPrice)) /
-        parseFloat(marketPrice)) *
-      100;
-    return discount.toFixed(2);
-  };
 
   const handleNavigationClick = (direction) => {
     if (direction === "previous" && currentIndex > 0) {
@@ -103,11 +98,6 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
                   >
                     {discountPercentage}%
                   </div>
-                  {skin.price !== null && (
-                    <div className="skin-price gradientText">
-                      Steam Price: {skin.price}$
-                    </div>
-                  )}
                   <img
                     src={`https://steamcommunity-a.akamaihd.net/economy/image/${skin.image}`}
                     alt={skin.market_hash_name}
@@ -128,18 +118,24 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
                           ),
                         )}
                     </div>
+
+                    <div className="price-container">
+                    {skin.price !== null && (
+                        <div className="skin-price">
+                          <FontAwesomeIcon icon={faSteam}  className="mr-1"/>
+                          {skin.price}$
+                        </div>
+                      )}
+                      <div className="skin-listedprice gradientText">
+                        {skin.listed_price}$
+                      </div>
+                    </div>
                     <button
-                      className="buy-button gradientText"
+                      className="buy-button"
                       onClick={() => handleSkinClick(skin)}
                     >
                       Buy
                     </button>
-
-                    {skin.price !== null && (
-                      <div className="skin-listedprice gradientText">
-                        {skin.listed_price}$
-                      </div>
-                    )}
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@
   padding: 0.5rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   font-family: "Barlow", sans-serif;
   flex-direction: column;
   align-items: center;
@@ -27,10 +27,9 @@
   position: relative;
   width: 100%;
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto 1fr auto; /* Change this line */
   background: linear-gradient(145deg, #0f0f15, #23232b);
   border-radius: 0.5rem;
-  padding: 0.25rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
   transform: scale(0.9);
   transition: transform 0.3s ease-in-out;
@@ -38,20 +37,16 @@
   overflow: hidden;
 }
 
-.skin-item:hover {
-  transform: scale(0.95);
-  border-color: #5cc6ff;
-  box-shadow: 0 0 12px #5cc6ff;
-}
-
 .skin-icon {
   justify-self: center;
-  width: 150px;
+  width: 275px;
   height: 150px;
   margin-top: 2rem;
   transition: transform 0.3s ease-in-out;
   transform-style: preserve-3d;
+  object-fit: contain;
 }
+
 
 .skin-item:hover .skin-icon {
   transform: rotateY(180deg);
@@ -67,52 +62,54 @@
   padding: 1rem;
   background: linear-gradient(145deg, #0f0f15, #23232b);
   border-radius: 0.75rem;
+  justify-content: space-between; 
 }
 
 .skin-name {
   word-wrap: break-word;
-  max-width: 80%;
-  min-height: 2.5rem;
+  max-width: 100%;
+  height: 3rem; 
   font-size: 1rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: normal;
 }
+
 
 .skin-wear {
   font-family: "Poppins", sans-serif;
-  position: absolute;
   top: 0.25rem;
   left: 0.25rem;
   font-size: 0.8rem;
   font-weight: bold;
-  background: rgba(19, 17, 24, 0.7);
   border-radius: 0.25rem;
   padding: 0.2rem 0.4rem;
   color: #92a0bb;
 }
 
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
 .skin-listedprice {
   font-family: "Poppins", sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
-  align-self: flex-end;
-  justify-self: flex-end;
+  margin-bottom: 5px;
+  text-align: right;
 }
 
 .skin-price {
   font-family: "Poppins", sans-serif;
   font-size: 0.8rem;
   font-weight: bold;
-  background: rgba(19, 17, 24, 0.7);
-  border-radius: 0.25rem;
-  padding: 0.2rem 0.4rem;
-  position: absolute;
-  top: 1rem;
-  right: 0.4rem;
-  margin-top: 5px;
-  z-index: 1;
+  margin-top: 0px;
+  text-align: right; 
 }
+
+
 
 .skin-navigation-button {
   align-self: center;
@@ -183,14 +180,11 @@
 
 .skin-discount {
   font-family: "Poppins", sans-serif;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: bold;
   position: absolute;
   top: 0.25rem;
   right: 0.25rem;
-  background: rgba(19, 17, 24, 0.7);
-  border-radius: 0.25rem;
-  padding: 0.2rem 0.4rem;
 }
 
 .discountGreen {
@@ -213,27 +207,20 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
-  font-feature-settings:
-    "pnum" on,
-    "lnum" on;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem; 
   cursor: pointer;
-  transition:
-    all 0.3s ease-in-out,
-    transform 0.3s ease;
-  position: absolute;
-  bottom: 1.1rem;
-  left: 1rem;
-  color: #f6f3ea;
-  border: 2px solid #5cc6ff;
-  border-radius: 50px;
-  box-shadow: 0 0 8px #5cc6ff;
+  transition: all 0.3s ease-in-out, transform 0.3s ease;
+  color: #fff;
+  width: 100%;
+  border-radius:5%;
+  border: none;
+  background-color: #383849; 
+  border-color: #5cc6ff;
+
 }
 
 .buy-button:hover {
-  border-color: #5cc6ff;
-  transform: scale(1.1) translateY(-2px);
-  box-shadow: 0 0 12px #5cc6ff;
+  transform: scale(1.05);
 }
 
 .skin-preview-title {
@@ -265,10 +252,7 @@
     align-items: center;
     gap: 1rem;
   }
-  .skin-price,
-  .skin-discount,
-  .skin-wear {
-  }
+
   .skin-listedprice {
     font-size: 1rem;
   }
@@ -288,9 +272,7 @@
     width: 100%;
     margin-bottom: 1rem;
   }
-  .skin-price,
-  .skin-discount {
-  }
+
   .skin-listedprice {
     font-size: 0.8rem;
   }
