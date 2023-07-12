@@ -100,10 +100,7 @@
 }
 
 .user-detail-container .login-user-img {
-  padding: 5px;
-  border: 1px solid #5cc6ff;
-  border-radius: 50px;
-  box-shadow: 0 0 10px #5cc6ff;
+  border-radius: 50%;
 }
 
 .dropdown-item {
