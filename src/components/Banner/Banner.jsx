@@ -150,7 +150,7 @@ const Banner = () => {
       {/* // Section for displaying different types of skins */}
       <div className="section-spacing">
         <SkinPreview
-          title="Lowest Tier Skins"
+          title="Higest Discount"
           sortFunc={(a, b) => a.listed_price - b.listed_price}
         />
       </div>
@@ -162,7 +162,7 @@ const Banner = () => {
       </div>
       <div className="section-spacing">
         <SkinPreview
-          title="Higest Discount"
+          title="Recently put for sale"
           sortFunc={(a, b) =>
             calculateDiscount(a.listed_price, a.price) -
             calculateDiscount(b.listed_price, b.price)
