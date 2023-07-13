@@ -22,7 +22,7 @@ const useUserSession = () => {
       fetchUserTradeLink();
     }
   }, [userSteamId]);
-  //Test
+  //Test idk
   const fetchUserData = async () => {
     const user = `${process.env.REACT_APP_API_URL}/api/auth/user`;
 

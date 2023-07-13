@@ -30,7 +30,7 @@ const SkinPreview = ({ title, sortFunc, itemsToShow: initialItemsToShow }) => {
       } else if (width <= 1669) {
         setItemsToShow(4);
       } else {
-        setItemsToShow(5);
+        setItemsToShow(6);
       }
     };
 
