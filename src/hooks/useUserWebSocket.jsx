@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import io from "socket.io-client";
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 const useUserWebsocket = () => {
   const [socket, setSocket] = useState(null);
@@ -48,8 +49,19 @@ const useUserWebsocket = () => {
           [key1]: data.items[key],
         }));
         setUserInventory(userInvArray);
-      } else {
+        toast.succes("User inventory fetched successfully.");
+      } else if (data.hasOwnProperty("error")) {
         setIsLoading(true);
+        toast.error("Error fetching user inventory.", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
+        setIsLoading(false);
       }
     });
 
@@ -68,6 +80,12 @@ const useUserWebsocket = () => {
       socket.off("user float");
     };
   }, [socket, userData]);
+
+  console.log('isLoading:', isLoading);
+  console.log('userInventory:', userInventory);
+  console.log('getAllInventoryPrice:', getAllInventoryPrice);
+  console.log('getBotFloatValue:', getBotFloatValue);
+  console.log('socket:', socket);
 
   return {
     isLoading,

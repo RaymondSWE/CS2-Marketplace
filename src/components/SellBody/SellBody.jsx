@@ -48,10 +48,9 @@ const SellBody = () => {
         data: updateUserResponseObject,
       });
       setIsDataLoaded(true);
+      toast.success("Inventory fetched successfully.");
     } else {
-      toast.info("Loading inventory prices...", {
-        theme: "colored",
-      });
+      setIsDataLoaded(false);
     }
   }, [userInventory, getAllInventoryPrice]);
 

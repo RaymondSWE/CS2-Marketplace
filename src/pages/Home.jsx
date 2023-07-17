@@ -16,6 +16,7 @@ const Home = () => {
     getBotFloatValue,
   } = useBotsWebsocket();
 
+
   return (
     <HelmetProvider>
       <Helmet>
