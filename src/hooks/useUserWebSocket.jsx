@@ -81,12 +81,6 @@ const useUserWebsocket = () => {
     };
   }, [socket, userData]);
 
-  console.log('isLoading:', isLoading);
-  console.log('userInventory:', userInventory);
-  console.log('getAllInventoryPrice:', getAllInventoryPrice);
-  console.log('getBotFloatValue:', getBotFloatValue);
-  console.log('socket:', socket);
-
   return {
     isLoading,
     userInventory,

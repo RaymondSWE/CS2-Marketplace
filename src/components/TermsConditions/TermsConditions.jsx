@@ -105,25 +105,20 @@ const TermsConditions = () => {
                       are considered final.
                     </p>
                     <p>
-                      <span className="gradientText">12. </span>We strongly
-                      recommend using our Antiscam extension to protect your
-                      Steam account from scammers.
-                    </p>
-                    <p>
-                      <span className="gradientText">13. </span>CSFairTrade
+                      <span className="gradientText">12. </span>CSFairTrade
                       Balance and Market Balance are in-platform currencies used
                       for transactions within our service. They have specific
                       terms and limitations, and the withdrawal process requires
                       KYC verification.
                     </p>
                     <p>
-                      <span className="gradientText">14. </span>We reserve the
+                      <span className="gradientText">13. </span>We reserve the
                       right to establish limits, prices, and terms for trades,
                       sales, and auctions to ensure fairness and prevent
                       monopolization.
                     </p>
                     <p>
-                      <span className="gradientText">15. </span>You are solely
+                      <span className="gradientText">14. </span>You are solely
                       responsible for fulfilling your tax obligations regarding
                       any money or profit received through our Platform.
                     </p>

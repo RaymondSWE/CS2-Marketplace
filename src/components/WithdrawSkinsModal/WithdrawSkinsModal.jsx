@@ -33,8 +33,18 @@ const WithdrawSkinsModal = ({ handleCloseWithdraw, showModal }) => {
       steamID64: userSteamId,
       assetid: assetid,
       bot_id: "bot_1",
-      tradelink: tradeLink,
+      tradeUrl: tradeLink,
     });
+
+    if (!tradeLink) {
+      toast.error("Trade link is not defined. Please set your trade link first.");
+      return;
+    }
+    
+
+    console.log("Steam ID in handleItemOptionClick: ", userSteamId);
+    console.log("Asset ID in handleItemOptionClick: ", assetid);
+    console.log("Bot ID in handleItemOptionClick: ", "bot_1");
     console.log("Trade link in handleItemOptionClick: ", tradeLink);
     socket.on("withdraw status", (data) => {
       if (data.error) {
