@@ -24,7 +24,7 @@ CSFairTrade offers an interface for users to manage their inventories directly w
 
 ## Deployment
 
-The platform is hosted on DigitalOcean droplets and runs on PM2. A CI/CD pipeline has been implemented using GitHub Actions for both the frontend and backend (both in development and production environments), each equipped with its own dedicated IP. Both frontend and backend have been secured with SSL certification, and traffic is managed using Nginx.
+Hosted on Vercel, main branch will push to prod.
 
 ## Getting Started
 
