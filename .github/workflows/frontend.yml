@@ -41,9 +41,9 @@ jobs:
     - name: Build
       run: CI=false npm run build
 
-    - name: Deploy to Vercel
-      uses: vercel/action@19
-      with:
-        vercel-token: ${{ secrets.VERCEL_TOKEN }}
-        github-token: ${{ secrets.GITHUB }}
+    # - name: Deploy to Vercel
+    #   uses: vercel/action@19
+    #   with:
+    #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+    #     github-token: ${{ secrets.GITHUB }}
 
