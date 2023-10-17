@@ -15,6 +15,8 @@ const SteamAccount = (props) => {
     setTradeLink(e.target.value);
   };
 
+  console.log(tradelink);
+
   const handleTradeLinkUpdate = () => {
     const tradeData = {
       steamid64: props.response._json.steamid,
@@ -30,17 +32,21 @@ const SteamAccount = (props) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(tradeData),
+      
     })
       .then((response) => response.json())
       .then((data) => {
+        console.log("Sending tradeData:", tradeData);
         if (data.error) {
           toast.error(data.error, { theme: "colored" });
         } else {
           toast.success("Trade Link added successfully!", { theme: "colored" });
         }
+
       })
       .catch((error) => console.error(error));
   };
+  
 
   return (
     <div
