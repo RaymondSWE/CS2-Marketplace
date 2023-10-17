@@ -186,7 +186,7 @@ const Navbar = () => {
       )}
       <nav className="navbar navbar-expand-lg navbar-dark mt-3 px-4 mb-4">
         <Link to="/" className="navbar-brand">
-          CSFairTrade
+          CSFairTrad
         </Link>
         <button
           className="navbar-toggler"
