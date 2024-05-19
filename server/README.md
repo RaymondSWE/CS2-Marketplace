@@ -1,34 +1,8 @@
 
 This project is a server for the CSFairTrade application, which allows users to trade, sell, and buy in-game items from various Steam games.
 
-# Requirements
-Node.js
-MySQL
-
-
-# Installation
-
-
-Install the dependencies:
-
-1. cd CSFairTrade/server
-2. npm install
-3. Create a .env file with your database and other configurations:
-
-- DB_HOST=your_database_host
-- DB_PORT=your_database_port
-- DB_USER=your_database_user
-- DB_PASS=your_database_password
-- DB_NAME=your_database_name
-- SECRET=your_session_secret
-- STRIPE_SECRET_KEY=your_stripe_secret_key
-- PORT=your_server_port
-
-***Run the server:***
-npm start
 
 # Features
-
 User authentication
 - Item trading and listing
 - Steam market integration
