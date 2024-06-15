@@ -7,6 +7,10 @@
 
 Welcome to **CSFairTrade**, a full-stack application that enables users to trade, sell, and buy in-game items from CS2 (Counter-Strike 2). 
 
+## 📹 Demo Video
+
+[![Watch the video](https://img.youtube.com/vi/fYdAn0O2g0Q/maxresdefault.jpg)](https://www.youtube.com/watch?v=fYdAn0O2g0Q)
+
 
 ## 🛠️ Tech Stack
 - **Frontend:** React, Framer Motion
