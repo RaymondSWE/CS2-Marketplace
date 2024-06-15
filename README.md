@@ -17,7 +17,6 @@ Welcome to **CSFairTrade**, a full-stack application that enables users to trade
 - **Backend:** Node.js, Express.js
 - **Database:** MySQL
 - **Real-time Communication:** Socket.IO
-- **Deployment:** Vercel
 
 ## 📋 Features
 - User authentication via Steam
